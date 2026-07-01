@@ -1,0 +1,13 @@
+{
+  "slug": "inventory-routing-agent",
+  "title": "Inventory Routing Agent",
+  "category": "ai",
+  "tools": ["Python", "OpenAI", "SQL"],
+  "featured": true,
+  "thumbnail": "/images/portfolio/inventory-routing-agent.svg",
+  "summary": "Agent-assisted routing recommendations for a generic retail inventory scenario.",
+  "date": "2025-01",
+  "links": {
+    "live": "/lab/agent-shell"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "executive-kpi-dashboard",
+  "title": "Executive KPI Dashboard",
+  "category": "visualization",
+  "tools": ["Tableau", "SQL", "Snowflake"],
+  "featured": true,
+  "thumbnail": "/images/portfolio/executive-kpi-dashboard.svg",
+  "summary": "Unified executive view across regions — cut weekly reporting time by 60%.",
+  "date": "2024-08",
+  "links": {
+    "live": "https://public.tableau.com"
+  }
+}

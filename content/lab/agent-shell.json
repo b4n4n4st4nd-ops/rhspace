@@ -1,0 +1,8 @@
+{
+  "slug": "agent-shell",
+  "title": "Retail Inventory Routing Agent",
+  "type": "agent",
+  "summary": "Clean-room agent demo — natural language inventory questions with expandable decision logs.",
+  "thumbnail": "/images/portfolio/inventory-routing-agent.svg",
+  "featured": true
+}

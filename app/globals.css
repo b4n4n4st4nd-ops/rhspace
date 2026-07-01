@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+[data-theme="light"] {
+  --background: #f4f2ef;
+  --foreground: #141414;
+  --surface: #ffffff;
+  --muted: #5c5c5c;
+  --border: #d9d4cc;
+  --accent: #00c2d4;
+  --accent-warm: #ff6b4a;
+  --gradient-start: #00c2d4;
+  --gradient-end: #7b5cff;
+}
+
+[data-theme="dark"] {
+  --background: #0d0d0f;
+  --foreground: #ededed;
+  --surface: #16161a;
+  --muted: #9a9a9a;
+  --border: #2a2a30;
+  --accent: #00e5ff;
+  --accent-warm: #ff8a65;
+  --gradient-start: #00e5ff;
+  --gradient-end: #a78bfa;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-warm: var(--accent-warm);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.prose-site {
+  max-width: 65ch;
+  line-height: 1.75;
+}
+
+.prose-site h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.prose-site h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-site p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.prose-site ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.prose-site li {
+  margin-bottom: 0.35rem;
+}
+
+.prose-site strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+.mesh-bg {
+  background-image:
+    radial-gradient(
+      ellipse 80% 60% at 10% 20%,
+      color-mix(in srgb, var(--accent) 12%, transparent),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 90% 80%,
+      color-mix(in srgb, var(--accent-warm) 10%, transparent),
+      transparent
+    );
 }

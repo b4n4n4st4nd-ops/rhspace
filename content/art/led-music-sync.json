@@ -1,0 +1,11 @@
+{
+  "slug": "led-music-sync",
+  "title": "LED Music Sync Installation",
+  "medium": "Interactive installation",
+  "tools": ["WLED", "Python", "OSC", "Ableton Live"],
+  "featured": true,
+  "thumbnail": "/images/art/led-music-sync.svg",
+  "summary": "Real-time LED visualization driven by live audio analysis and beat sync.",
+  "images": ["/images/art/led-music-sync.svg"],
+  "date": "2024-11"
+}

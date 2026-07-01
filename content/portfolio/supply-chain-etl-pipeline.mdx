@@ -1,0 +1,18 @@
+## Situation
+
+Inventory data arrived from ERP, WMS, and third-party logistics partners in incompatible formats with frequent schema drift.
+
+## Task
+
+Build a repeatable ETL pipeline that ingests, validates, and publishes clean inventory tables for analytics consumers.
+
+## Action
+
+- Designed Alteryx workflows for ingestion with schema validation gates
+- Wrote SQL transformations for conformed dimensions and slowly changing attributes
+- Added Python scripts for edge-case parsing and alerting on anomaly thresholds
+- Documented lineage and refresh SLAs for downstream Tableau and SQL users
+
+## Result
+
+Manual reconciliation effort reduced by ~70%. Downstream dashboards gained a trusted daily refresh cadence.

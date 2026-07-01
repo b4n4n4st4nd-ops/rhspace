@@ -1,0 +1,8 @@
+{
+  "slug": "analytics-explorer",
+  "title": "Analytics Explorer (Streamlit)",
+  "type": "streamlit",
+  "summary": "Placeholder Streamlit embed — replace embedUrl with your deployed app.",
+  "embedUrl": "https://share.streamlit.io",
+  "featured": false
+}

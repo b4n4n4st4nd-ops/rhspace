@@ -1,0 +1,52 @@
+{
+  "name": "Ryan Hambleton",
+  "title": "Visualization Developer & Analytics Engineer",
+  "summary": "I build BI platforms, data pipelines, and AI-assisted workflows — from Tableau dashboards to agent prototypes. Platform-agnostic, outcome-focused.",
+  "email": "hello@ryanhambleton.space",
+  "skills": [
+    "Tableau",
+    "Alteryx",
+    "SQL",
+    "Python",
+    "Snowflake",
+    "Data Modeling",
+    "ETL / ELT",
+    "AI Agents",
+    "Next.js",
+    "Streamlit",
+    "Data Visualization"
+  ],
+  "experience": [
+    {
+      "company": "Global Retail Enterprise",
+      "role": "Visualization Developer & Analytics Engineer",
+      "start": "2021",
+      "end": "Present",
+      "location": "Remote",
+      "highlights": [
+        "Led executive KPI dashboard program with governed metrics and row-level security",
+        "Built Alteryx and SQL pipelines for multi-source inventory analytics",
+        "Prototyped agent-assisted workflows for operational routing scenarios (clean-room demos)",
+        "Mentored analysts on self-service patterns and documentation standards"
+      ]
+    },
+    {
+      "company": "Analytics Consultancy",
+      "role": "BI Developer",
+      "start": "2018",
+      "end": "2021",
+      "highlights": [
+        "Delivered Tableau solutions across retail, healthcare, and finance clients",
+        "Automated recurring reports with Alteryx, reducing manual effort by 50%+",
+        "Translated ambiguous business questions into measurable dashboard requirements"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Your University",
+      "degree": "B.S. — field of study",
+      "year": "2018"
+    }
+  ]
+}
