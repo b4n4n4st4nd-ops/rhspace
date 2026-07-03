@@ -7,5 +7,6 @@
   </defs>
   <rect width="800" height="500" fill="#16161a"/>
   <rect x="40" y="40" width="720" height="420" rx="12" fill="url(#g)" opacity="0.25"/>
-  <text x="400" y="260" text-anchor="middle" fill="#ededed" font-family="monospace" font-size="20">Executive KPI Dashboard</text>
+  <text x="400" y="250" text-anchor="middle" fill="#ededed" font-family="monospace" font-size="20">Executive KPI</text>
+  <text x="400" y="280" text-anchor="middle" fill="#ededed" font-family="monospace" font-size="20">Performance Dashboard</text>
 </svg>

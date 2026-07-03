@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00c2d4"/>
+      <stop offset="100%" style="stop-color:#ff6b4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="#16161a"/>
+  <rect x="40" y="40" width="720" height="420" rx="12" fill="url(#g)" opacity="0.25"/>
+  <path d="M145 315 C220 210 285 265 350 180 S520 185 655 110" fill="none" stroke="#ededed" stroke-width="5" opacity="0.45"/>
+  <rect x="145" y="335" width="95" height="34" rx="8" fill="#ededed" opacity="0.12"/>
+  <rect x="270" y="335" width="95" height="34" rx="8" fill="#ededed" opacity="0.18"/>
+  <rect x="395" y="335" width="95" height="34" rx="8" fill="#ededed" opacity="0.14"/>
+  <rect x="520" y="335" width="95" height="34" rx="8" fill="#ededed" opacity="0.20"/>
+  <text x="400" y="260" text-anchor="middle" fill="#ededed" font-family="monospace" font-size="22">Market Insights</text>
+  <text x="400" y="290" text-anchor="middle" fill="#ededed" font-family="monospace" font-size="22">Dashboard</text>
+</svg>

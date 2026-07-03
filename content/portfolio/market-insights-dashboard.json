@@ -1,0 +1,11 @@
+{
+  "slug": "market-insights-dashboard",
+  "title": "Market Insights Dashboard",
+  "category": "analytics",
+  "tools": ["Tableau", "SQL", "Python"],
+  "featured": true,
+  "thumbnail": "/images/portfolio/market-insights-dashboard.svg",
+  "summary": "Planned market intelligence dashboard for trends, segments, competitors, and growth signals.",
+  "date": "2026-02",
+  "links": {}
+}
