@@ -64,6 +64,8 @@ export interface ResumeData {
   title: string;
   summary: string;
   email: string;
+  phone?: string;
+  linkedin?: string;
   skills: string[];
   experience: ResumeExperience[];
   education: ResumeEducation[];

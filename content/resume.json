@@ -1,52 +1,88 @@
 {
   "name": "Ryan Hambleton",
-  "title": "Visualization Developer & Analytics Engineer",
-  "summary": "I build BI platforms, data pipelines, and AI-assisted workflows — from Tableau dashboards to agent prototypes. Platform-agnostic, outcome-focused.",
-  "email": "hello@ryanhambleton.space",
+  "title": "Senior Visualization & Experience Manager",
+  "summary": "Principal-level analytics and strategy leader with 15+ years of experience building enterprise-scale BI ecosystems and AI-driven decision systems. Passionate about driving organizational growth through the intersection of human-centered design, robust solution architecture, and strategic storytelling. Proven track record of bridging technical complexity with executive business goals to deliver multi-million-dollar EBIT impact—all while fostering data culture, community, and capability-building across large-scale global teams.",
+  "email": "ryha1089@gmail.com",
+  "phone": "815-481-4400",
+  "linkedin": "https://www.linkedin.com/in/ryanhambleton",
   "skills": [
-    "Tableau",
-    "Alteryx",
+    "Generative AI Design & Development",
+    "Agent Development",
+    "NLP Solutions",
+    "Model Performance Evaluation",
+    "Model Tuning & Analysis",
+    "Cursor",
+    "Genie (Databricks)",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Streamlit",
     "SQL",
     "Python",
     "Snowflake",
-    "Data Modeling",
-    "ETL / ELT",
-    "AI Agents",
-    "Next.js",
-    "Streamlit",
-    "Data Visualization"
+    "Databricks",
+    "Data Lake/Warehouse Reporting",
+    "Semantic Layers",
+    "KPI Design",
+    "Self-Service Analytics",
+    "Production Dashboards",
+    "Workflow Automation",
+    "Data Quality",
+    "Insight Generation",
+    "Productized BI",
+    "Tableau",
+    "Power BI",
+    "ThoughtSpot",
+    "Alteryx",
+    "UX/UI",
+    "Design Standards",
+    "Executive Storytelling"
   ],
   "experience": [
     {
-      "company": "Global Retail Enterprise",
-      "role": "Visualization Developer & Analytics Engineer",
+      "company": "Nike",
+      "role": "Senior Visualization & Experience Manager",
       "start": "2021",
-      "end": "Present",
-      "location": "Remote",
+      "end": "2026",
       "highlights": [
-        "Led executive KPI dashboard program with governed metrics and row-level security",
-        "Built Alteryx and SQL pipelines for multi-source inventory analytics",
-        "Prototyped agent-assisted workflows for operational routing scenarios (clean-room demos)",
-        "Mentored analysts on self-service patterns and documentation standards"
+        "Architected an end-to-end reporting ecosystem for Marketplace Operations, transitioning the organization from reactive dashboarding to an automated Monthly Business Review (MBR) framework; surfaced 5+ initiatives totaling $5M+ in annual incremental EBIT and increased potential product ROI by $25M+.",
+        "Delivered advanced AI-native analytics products, including Streamlit applications utilizing Databricks agents and LLM workflows to automate natural-language data interaction.",
+        "Bridged the gap between predictive data science models and executive decision-making, translating complex statistical outputs into actionable operational metrics for 500+ global stakeholders.",
+        "Founded the \"Visualization Innovation Group\" (30+ members) to institutionalize AI-driven workflows; developed proprietary \"Agent Creation Kits\" (scaffolding and packaging standards) that empowered cross-functional teams to develop, package, and deploy agentic AI solutions (e.g., Tableau Documentation Agent, Cursor Agent Packager).",
+        "Spearheaded enterprise-grade analytics modernization by defining semantic layers and reporting architectures during large-scale migrations (Snowflake to Databricks), resulting in improved dashboard adoption, reduced technical debt, and enhanced data reliability."
       ]
     },
     {
-      "company": "Analytics Consultancy",
-      "role": "BI Developer",
-      "start": "2018",
+      "company": "ProKarma (Concentrix)",
+      "role": "Senior Analytics Engineer",
+      "start": "2017",
       "end": "2021",
       "highlights": [
-        "Delivered Tableau solutions across retail, healthcare, and finance clients",
-        "Automated recurring reports with Alteryx, reducing manual effort by 50%+",
-        "Translated ambiguous business questions into measurable dashboard requirements"
+        "Advised Director- and VP-level stakeholders on BI platform strategy and analytics operating models, transforming disjointed, legacy reporting functions into high-performing, centralized Centers of Excellence.",
+        "Re-architected underperforming enterprise analytics environments for Fortune 500 clients (including adidas, Verizon, and Walt Disney Studios), improving system performance by consolidating fragmented workflows and eliminating manual technical debt.",
+        "Engineered high-value, scalable automation solutions that replaced manual processes, generating $1M+ in annual cost savings and significantly improving operational throughput.",
+        "Institutionalized development standards, overseeing the engineering of 100+ dashboards and leading enablement initiatives that trained 1,000+ users, significantly increasing organizational data literacy and self-service adoption.",
+        "Led as the primary consultant on large-scale analytics transformations, translating complex business requirements into robust, scalable technical architectures."
+      ]
+    },
+    {
+      "company": "Legacy Marketing",
+      "role": "Marketing Analyst, Account Coordinator",
+      "start": "2014",
+      "end": "2017",
+      "highlights": [
+        "Architected the department's inaugural analytics and reporting capability, establishing the systems required to measure complex, multi-channel campaign impact.",
+        "Designed and presented weekly dashboard frameworks that translated campaign performance into actionable business strategy for client leadership (e.g., Pernod Ricard).",
+        "Modernized internal data interaction by providing UI/UX leadership for reporting portals, directly improving data accessibility and usability.",
+        "Operationalized data-driven decision-making by authoring, designing, and testing consumer surveys and marketing materials, leveraging A/B testing and statistical analysis to drive strategic results."
       ]
     }
   ],
   "education": [
     {
-      "institution": "Your University",
-      "degree": "B.S. — field of study",
-      "year": "2018"
+      "institution": "North Central College",
+      "degree": "B.A. Marketing",
+      "year": ""
     }
   ]
 }

@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Resume",
   description:
-    "Ryan Hambleton — visualization developer and analytics engineer. Experience, skills, and download.",
+    "Ryan Hambleton — senior visualization and experience manager. Experience, skills, and download.",
   path: "/resume",
 });
 
@@ -17,8 +17,39 @@ export default function ResumePage() {
 
   return (
     <>
-      <PageHero title={resume.name} subtitle={resume.title}>
-        <p className="max-w-2xl text-muted leading-relaxed">{resume.summary}</p>
+      <PageHero title={resume.name}>
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+          <a
+            href={`mailto:${resume.email}`}
+            className="text-accent hover:underline"
+          >
+            {resume.email}
+          </a>
+          {resume.phone && (
+            <>
+              <span aria-hidden>|</span>
+              <a
+                href={`tel:${resume.phone.replace(/\D/g, "")}`}
+                className="hover:text-accent transition-colors"
+              >
+                {resume.phone}
+              </a>
+            </>
+          )}
+          {resume.linkedin && (
+            <>
+              <span aria-hidden>|</span>
+              <a
+                href={resume.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                www.linkedin.com/in/ryanhambleton
+              </a>
+            </>
+          )}
+        </p>
         <a
           href="/resume.pdf"
           download
@@ -29,12 +60,16 @@ export default function ResumePage() {
       </PageHero>
       <Container className="py-16">
         <section className="mb-16">
-          <h2 className="mb-6 text-xl font-semibold">Experience</h2>
-          <Timeline experience={resume.experience} />
+          <h2 className="mb-6 text-xl font-semibold">Summary</h2>
+          <p className="max-w-3xl text-muted leading-relaxed">{resume.summary}</p>
         </section>
         <section className="mb-16">
-          <h2 className="mb-6 text-xl font-semibold">Skills</h2>
+          <h2 className="mb-6 text-xl font-semibold">Core Skills</h2>
           <SkillPills skills={resume.skills} />
+        </section>
+        <section className="mb-16">
+          <h2 className="mb-6 text-xl font-semibold">Experience</h2>
+          <Timeline experience={resume.experience} />
         </section>
         <section>
           <h2 className="mb-6 text-xl font-semibold">Education</h2>
@@ -46,21 +81,13 @@ export default function ResumePage() {
               >
                 <p className="font-semibold">{edu.institution}</p>
                 <p className="text-sm text-muted">
-                  {edu.degree} · {edu.year}
+                  {edu.degree}
+                  {edu.year ? ` · ${edu.year}` : ""}
                 </p>
               </li>
             ))}
           </ul>
         </section>
-        <p className="mt-12 text-sm text-muted">
-          Contact:{" "}
-          <a
-            href={`mailto:${resume.email}`}
-            className="text-accent hover:underline"
-          >
-            {resume.email}
-          </a>
-        </p>
       </Container>
     </>
   );
