@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "About",
   description:
-    "Visualization developer and analytics engineer — from dashboards to AI-driven workflows.",
+    "Strategy, data, design, and development — building adaptive experiences that help people and organizations grow.",
   path: "/about",
 });
 
@@ -17,10 +17,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <PageHero
-        title="About me"
-        subtitle="From reactive dashboarding to AI-driven workflows — building systems that help people see and decide."
-      />
+      <PageHero title="About me" />
       <Container className="py-16">
         <div className="prose-site max-w-none">{content}</div>
         <section className="mt-16 border-t border-border pt-16">

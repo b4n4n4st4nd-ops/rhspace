@@ -20,8 +20,8 @@ export default function HomePage() {
               {site.title}
             </p>
             <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
-              I solve challenges facing humans & organizations by{" "}
-              <span className="gradient-text">designing dynamic experiences & solutions</span>
+              I build bridges between{" "}
+              <span className="gradient-text">possibility and reality</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted leading-relaxed">
               {site.tagline}
