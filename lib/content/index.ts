@@ -2,10 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
+import { isVisibleInPortfolioGrid } from "@/lib/dashboards/project";
 import type {
   AboutContent,
+  ArtPageConfig,
   ArtPiece,
   LabDemo,
+  PoetryCollection,
   Project,
   ResumeData,
   SiteConfig,
@@ -22,6 +25,13 @@ export function getSiteConfig(): SiteConfig {
   return readJsonFile<SiteConfig>(path.join(contentDir, "site.json"));
 }
 
+function sortProjects(a: Project, b: Project): number {
+  const aOrder = a.displayOrder ?? Number.POSITIVE_INFINITY;
+  const bOrder = b.displayOrder ?? Number.POSITIVE_INFINITY;
+  if (aOrder !== bOrder) return aOrder - bOrder;
+  return (b.date ?? "").localeCompare(a.date ?? "");
+}
+
 export function getProjects(): Project[] {
   const dir = path.join(contentDir, "portfolio");
   if (!fs.existsSync(dir)) return [];
@@ -29,7 +39,12 @@ export function getProjects(): Project[] {
     .readdirSync(dir)
     .filter((f) => f.endsWith(".json"))
     .map((f) => readJsonFile<Project>(path.join(dir, f)))
-    .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
+    .sort(sortProjects);
+}
+
+/** Portfolio grid and featured sections — hides draft dashboards. */
+export function getPublishedProjects(): Project[] {
+  return getProjects().filter(isVisibleInPortfolioGrid);
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {
@@ -37,7 +52,7 @@ export function getProjectBySlug(slug: string): Project | undefined {
 }
 
 export function getFeaturedProjects(): Project[] {
-  return getProjects().filter((p) => p.featured);
+  return getPublishedProjects().filter((p) => p.featured);
 }
 
 export async function getProjectMdx(slug: string) {
@@ -63,6 +78,14 @@ export function getArtPieces(): ArtPiece[] {
 
 export function getArtBySlug(slug: string): ArtPiece | undefined {
   return getArtPieces().find((a) => a.slug === slug);
+}
+
+export function getArtPageConfig(): ArtPageConfig {
+  return readJsonFile<ArtPageConfig>(path.join(contentDir, "art-page.json"));
+}
+
+export function getPoetryCollection(): PoetryCollection {
+  return readJsonFile<PoetryCollection>(path.join(contentDir, "poetry.json"));
 }
 
 export async function getArtMdx(slug: string) {

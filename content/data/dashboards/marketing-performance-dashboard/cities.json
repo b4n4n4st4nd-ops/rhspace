@@ -1,0 +1,7 @@
+[
+  { "id": "metro-north", "label": "Metro North", "x": 72, "y": 28 },
+  { "id": "harbor-city", "label": "Harbor City", "x": 84, "y": 52 },
+  { "id": "summit-valley", "label": "Summit Valley", "x": 38, "y": 35 },
+  { "id": "prairie-gateway", "label": "Prairie Gateway", "x": 48, "y": 42 },
+  { "id": "lakeside-hub", "label": "Lakeside Hub", "x": 58, "y": 30 }
+]

@@ -1,0 +1,18 @@
+{
+  "slug": "marketing-performance-dashboard",
+  "title": "Experiential Marketing Performance Dashboard",
+  "kind": "dashboard",
+  "status": "draft",
+  "designVersion": "report-card-v1",
+  "dashboardType": "marketing-performance",
+  "capabilityTags": ["kpi-tiles", "geo-map", "filter-bar", "executive-summary"],
+  "displayOrder": 10,
+  "componentKey": "marketing-performance-dashboard",
+  "dataPath": "marketing-performance-dashboard",
+  "category": "analytics",
+  "tools": ["Tableau", "SQL", "Python"],
+  "featured": true,
+  "thumbnail": "/images/portfolio/marketing-performance-dashboard.svg",
+  "summary": "Interactive experiential marketing report — events, reach, engagement, goal progress, geo and brand performance for a fictional multi-brand portfolio.",
+  "date": "2026-01"
+}

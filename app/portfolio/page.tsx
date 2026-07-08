@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/SiteChrome";
 import { PageHero } from "@/components/ui/PageHero";
 import { PortfolioGrid } from "@/components/portfolio/PortfolioGrid";
-import { getProjects } from "@/lib/content";
+import { getPublishedProjects } from "@/lib/content";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -12,7 +12,7 @@ export const metadata = createMetadata({
 });
 
 export default function PortfolioPage() {
-  const projects = getProjects();
+  const projects = getPublishedProjects();
 
   return (
     <>

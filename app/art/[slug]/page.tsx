@@ -67,6 +67,18 @@ export default async function ArtDetailPage({ params }: PageProps) {
         </div>
       )}
       <Container className="py-16">
+        {piece.video && (
+          <div className="mb-12 overflow-hidden rounded-xl border border-border">
+            <video
+              className="w-full"
+              controls
+              playsInline
+              poster={piece.thumbnail}
+            >
+              <source src={piece.video} type="video/mp4" />
+            </video>
+          </div>
+        )}
         {mdx ? (
           <div className="prose-site max-w-none">{mdx}</div>
         ) : (

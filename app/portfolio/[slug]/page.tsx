@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { DashboardShell } from "@/components/dashboards/shell/DashboardShell";
 import { Container } from "@/components/layout/SiteChrome";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -8,6 +9,8 @@ import {
   getProjectMdx,
   getProjectSlugs,
 } from "@/lib/content";
+import { loadDashboardData } from "@/lib/dashboards/loadData";
+import { getDashboardEntry } from "@/lib/dashboards/registry";
 import { createMetadata } from "@/lib/seo";
 
 interface PageProps {
@@ -33,6 +36,28 @@ export default async function ProjectPage({ params }: PageProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+
+  if (project.kind === "dashboard") {
+    const componentKey = project.componentKey ?? slug;
+    const dataPath = project.dataPath ?? slug;
+    const entry = getDashboardEntry(componentKey);
+    const data = loadDashboardData(dataPath);
+
+    if (!entry || !data) notFound();
+
+    const Dashboard = entry.component;
+
+    return (
+      <DashboardShell
+        project={project}
+        designVersion={project.designVersion ?? "report-card-v1"}
+        disclaimer={data.meta.disclaimer}
+        lastRefreshed={data.meta.lastRefreshed}
+      >
+        <Dashboard data={data} />
+      </DashboardShell>
+    );
+  }
 
   const mdx = await getProjectMdx(slug);
 
