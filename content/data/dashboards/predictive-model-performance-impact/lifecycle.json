@@ -1,0 +1,14 @@
+{
+  "stages": [
+    "Input",
+    "Recommend",
+    "Review",
+    "Optimize",
+    "Adopt",
+    "Measure",
+    "Detect",
+    "Intervene",
+    "Improve"
+  ],
+  "accentStages": ["Detect", "Intervene"]
+}

@@ -1,0 +1,65 @@
+{
+  "dimensions": [
+    {
+      "id": "model-recommendations",
+      "label": "Model recommendations",
+      "description": "Recommendations surfaced to operators with context, priority, and expected outcome."
+    },
+    {
+      "id": "model-outputs",
+      "label": "Model outputs",
+      "description": "Scores, rankings, allocations, and confidence bands delivered by the system."
+    },
+    {
+      "id": "human-review",
+      "label": "Human review",
+      "description": "Review queues, approval paths, and time-to-decision for human-in-the-loop workflows."
+    },
+    {
+      "id": "overrides",
+      "label": "Overrides",
+      "description": "Manual changes, policy exceptions, and corrections applied against model guidance."
+    },
+    {
+      "id": "adoption-rate",
+      "label": "Adoption rate",
+      "description": "Share of recommendations accepted, deferred, or rejected over time."
+    },
+    {
+      "id": "performance-rate",
+      "label": "Performance rate",
+      "description": "Operational success of adopted actions against targets and service levels."
+    },
+    {
+      "id": "optimization-outcomes",
+      "label": "Optimization outcomes",
+      "description": "Results from executed optimizations — efficiency, throughput, and constraint satisfaction."
+    },
+    {
+      "id": "exception-detection",
+      "label": "Exception detection",
+      "description": "Out-of-policy cases, stale inputs, and operational alerts requiring attention."
+    },
+    {
+      "id": "action-tracking",
+      "label": "Action tracking",
+      "description": "Decisions taken, workflows triggered, and downstream system responses."
+    },
+    {
+      "id": "estimated-value-opportunity",
+      "label": "Estimated value opportunity",
+      "description": "Projected lift from pending or partially adopted recommendations."
+    },
+    {
+      "id": "cumulative-business-impact",
+      "label": "Cumulative business impact",
+      "description": "Attributed revenue, cost, and service-level outcomes realized over time."
+    },
+    {
+      "id": "model-improvement-over-time",
+      "label": "Model improvement over time",
+      "description": "Learning loops from overrides, exceptions, and outcome feedback into model refinement."
+    }
+  ],
+  "optionalMlDiagnostics": ["precision", "recall", "drift"]
+}

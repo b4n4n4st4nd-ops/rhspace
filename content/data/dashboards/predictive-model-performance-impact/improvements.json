@@ -1,0 +1,14 @@
+[
+  {
+    "id": "imp-mw-2509",
+    "interventionId": "int-mw-2509",
+    "adoptionBefore": 74,
+    "adoptionAfter": 83,
+    "performanceBefore": 61,
+    "performanceAfter": 85,
+    "overrideRateBefore": 31,
+    "overrideRateAfter": 10,
+    "incrementalValueImpact": 1200000,
+    "cumulativeValueImpact": 6800000
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "int-mw-2509",
+    "outlierId": "olr-mw-2508",
+    "actionType": "Recommendation parameter review and override-reason capture",
+    "actionStatus": "Closed",
+    "date": "2025-09-15",
+    "ownerTeam": "Demand Planning Operations",
+    "description": "Reviewed recommendation parameters for the affected segment and implemented structured override-reason capture to improve model feedback loops."
+  }
+]

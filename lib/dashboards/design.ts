@@ -49,8 +49,24 @@ const reportCardV1: DashboardDesignTokens = {
   sectionTitle: "text-[11px] font-semibold uppercase tracking-wide text-[#4a4a4a]",
 };
 
-/** Placeholder — mirrors v1 until a V2 redesign is applied site-wide. */
-const reportCardV2: DashboardDesignTokens = { ...reportCardV1 };
+/** V2 — tighter executive model-operations reporting. */
+const reportCardV2: DashboardDesignTokens = {
+  shell: "bg-[#f0f0ee] text-[#1a1a1a]",
+  header: "border-b border-[#1f1f1f] bg-[#121212] text-[#f5f5f5]",
+  headerMuted: "text-[#a3a3a3]",
+  headerSubtle: "text-[#868686]",
+  main: "mx-auto max-w-6xl px-6 py-4",
+  panel: "border border-[#d2d2d0] bg-white",
+  panelHeader: "border-b border-[#e2e2e0] bg-[#f8f8f7] px-3 py-2",
+  kpiTile: "border border-[#d2d2d0] bg-white px-3 py-2.5",
+  kpiLabel: "text-[10px] font-semibold uppercase tracking-wide text-[#656565]",
+  kpiValue: "text-xl font-semibold tabular-nums tracking-tight text-[#141414] sm:text-2xl",
+  accentPositive: "text-[#2b6cb0]",
+  accentNegative: "text-[#e87722]",
+  accentNeutral: "text-[#6b6b6b]",
+  label: "text-[10px] uppercase tracking-wide",
+  sectionTitle: "text-[11px] font-semibold uppercase tracking-wide text-[#3d3d3d]",
+};
 
 export const dashboardDesign: Record<DesignVersion, DashboardDesignTokens> = {
   "report-card-v1": reportCardV1,

@@ -1,7 +1,7 @@
 import type { ComponentType } from "react";
 import type { DashboardData } from "@/lib/dashboards/types";
-import { DecisionSupportDashboard } from "@/components/dashboards/demos/decision-support-framework/DecisionSupportDashboard";
 import { MarketingPerformanceDashboard } from "@/components/dashboards/demos/marketing-performance-dashboard/MarketingPerformanceDashboard";
+import { PredictiveModelPerformanceImpactDashboard } from "@/components/dashboards/demos/predictive-model-performance-impact/PredictiveModelPerformanceImpactDashboard";
 
 export type DashboardComponent = ComponentType<{ data: DashboardData }>;
 
@@ -9,8 +9,8 @@ export type DashboardComponent = ComponentType<{ data: DashboardData }>;
 const registry = {
   "marketing-performance-dashboard":
     MarketingPerformanceDashboard as DashboardComponent,
-  "decision-support-framework":
-    DecisionSupportDashboard as DashboardComponent,
+  "predictive-model-performance-impact":
+    PredictiveModelPerformanceImpactDashboard as DashboardComponent,
 } satisfies Record<string, DashboardComponent>;
 
 export type DashboardComponentKey = keyof typeof registry;

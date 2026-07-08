@@ -1,0 +1,19 @@
+[
+  {
+    "id": "olr-mw-2508",
+    "period": "2025-08",
+    "periodLabel": "Aug 2025",
+    "market": "Midwest Region",
+    "product": "Electronics Distribution",
+    "category": "Allocation",
+    "metricLabel": "Performance rate",
+    "metricValue": 61,
+    "expectedMin": 78,
+    "expectedMax": 86,
+    "zScore": -2.4,
+    "severity": "High",
+    "likelyDriver": "Elevated override behavior concentrated in the selected market/product segment; recommendation adoption and realized performance fell outside the expected range.",
+    "autoDetected": true,
+    "interventionId": "int-mw-2509"
+  }
+]

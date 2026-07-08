@@ -41,20 +41,110 @@ export interface MarketingPerformanceData {
   campaigns: CampaignRow[];
 }
 
-export interface FrameworkDimension {
+export interface ModelOperationsDimension {
   id: string;
   label: string;
   description: string;
 }
 
-export interface DecisionSupportData {
-  meta: DashboardMeta;
-  framework: {
-    dimensions: FrameworkDimension[];
-  };
+/** Flagship model-operations framework — business decision-support, not ML monitoring. */
+export interface ModelOperationsKpi {
+  id: string;
+  label: string;
+  value: number;
+  format: "count" | "percent" | "currency";
+  delta: number;
+  comparisonPeriod: string;
+  subtext: string;
+  higherIsBetter: boolean;
 }
 
-export type DashboardData = MarketingPerformanceData | DecisionSupportData;
+export interface ModelOperationsKpis {
+  items: ModelOperationsKpi[];
+}
+
+export interface ModelOperationsTrendPoint {
+  month: string;
+  label: string;
+  adoptionRate: number;
+  performanceRate: number;
+  valueOpportunity?: number;
+  cumulativeValueImpact?: number;
+  expectedMin: number;
+  expectedMax: number;
+  outlierId?: string;
+  isPostIntervention?: boolean;
+}
+
+export interface ModelOperationsTrends {
+  subtitle: string;
+  interventionMonth: string;
+  points: ModelOperationsTrendPoint[];
+}
+
+export interface ModelOutlier {
+  id: string;
+  period: string;
+  periodLabel: string;
+  market: string;
+  product: string;
+  category: string;
+  metricLabel: string;
+  metricValue: number;
+  expectedMin: number;
+  expectedMax: number;
+  zScore: number;
+  severity: "High" | "Medium" | "Low";
+  likelyDriver: string;
+  autoDetected: boolean;
+  interventionId: string;
+}
+
+export interface ModelIntervention {
+  id: string;
+  outlierId: string;
+  actionType: string;
+  actionStatus: "Open" | "In progress" | "Closed";
+  date: string;
+  ownerTeam: string;
+  description: string;
+}
+
+export interface ModelImprovement {
+  id: string;
+  interventionId: string;
+  adoptionBefore: number;
+  adoptionAfter: number;
+  performanceBefore: number;
+  performanceAfter: number;
+  overrideRateBefore: number;
+  overrideRateAfter: number;
+  incrementalValueImpact: number;
+  cumulativeValueImpact: number;
+}
+
+export interface ModelOperationsLifecycle {
+  stages: string[];
+  accentStages: string[];
+}
+
+export interface PredictiveModelPerformanceImpactData {
+  meta: DashboardMeta;
+  framework: {
+    dimensions: ModelOperationsDimension[];
+    optionalMlDiagnostics?: string[];
+  };
+  lifecycle: ModelOperationsLifecycle;
+  kpis: ModelOperationsKpis;
+  trends: ModelOperationsTrends;
+  outliers: ModelOutlier[];
+  interventions: ModelIntervention[];
+  improvements: ModelImprovement[];
+}
+
+export type DashboardData =
+  | MarketingPerformanceData
+  | PredictiveModelPerformanceImpactData;
 
 export interface DashboardKpis {
   events: number;

@@ -1,0 +1,30 @@
+{
+  "subtitle": "24-month adoption and performance with expected range benchmark",
+  "interventionMonth": "2025-10",
+  "points": [
+    { "month": "2024-07", "label": "Jul 24", "adoptionRate": 72, "performanceRate": 80, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 3200000 },
+    { "month": "2024-08", "label": "Aug 24", "adoptionRate": 73, "performanceRate": 81, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 3350000 },
+    { "month": "2024-09", "label": "Sep 24", "adoptionRate": 74, "performanceRate": 82, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 3500000 },
+    { "month": "2024-10", "label": "Oct 24", "adoptionRate": 73, "performanceRate": 81, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 3650000 },
+    { "month": "2024-11", "label": "Nov 24", "adoptionRate": 75, "performanceRate": 83, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 3800000 },
+    { "month": "2024-12", "label": "Dec 24", "adoptionRate": 76, "performanceRate": 84, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 3950000 },
+    { "month": "2025-01", "label": "Jan 25", "adoptionRate": 75, "performanceRate": 83, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 4100000 },
+    { "month": "2025-02", "label": "Feb 25", "adoptionRate": 76, "performanceRate": 82, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 4250000 },
+    { "month": "2025-03", "label": "Mar 25", "adoptionRate": 77, "performanceRate": 84, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 4400000 },
+    { "month": "2025-04", "label": "Apr 25", "adoptionRate": 76, "performanceRate": 83, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 4550000 },
+    { "month": "2025-05", "label": "May 25", "adoptionRate": 77, "performanceRate": 84, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 4700000 },
+    { "month": "2025-06", "label": "Jun 25", "adoptionRate": 78, "performanceRate": 83, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 4850000 },
+    { "month": "2025-07", "label": "Jul 25", "adoptionRate": 77, "performanceRate": 82, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 5000000 },
+    { "month": "2025-08", "label": "Aug 25", "adoptionRate": 74, "performanceRate": 61, "expectedMin": 78, "expectedMax": 86, "valueOpportunity": 420000, "cumulativeValueImpact": 5050000, "outlierId": "olr-mw-2508" },
+    { "month": "2025-09", "label": "Sep 25", "adoptionRate": 75, "performanceRate": 68, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 5200000 },
+    { "month": "2025-10", "label": "Oct 25", "adoptionRate": 79, "performanceRate": 78, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 5450000, "isPostIntervention": true },
+    { "month": "2025-11", "label": "Nov 25", "adoptionRate": 81, "performanceRate": 82, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 5750000, "isPostIntervention": true },
+    { "month": "2025-12", "label": "Dec 25", "adoptionRate": 82, "performanceRate": 84, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 6050000, "isPostIntervention": true },
+    { "month": "2026-01", "label": "Jan 26", "adoptionRate": 83, "performanceRate": 85, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 6300000, "isPostIntervention": true },
+    { "month": "2026-02", "label": "Feb 26", "adoptionRate": 82, "performanceRate": 84, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 6450000, "isPostIntervention": true },
+    { "month": "2026-03", "label": "Mar 26", "adoptionRate": 83, "performanceRate": 85, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 6600000, "isPostIntervention": true },
+    { "month": "2026-04", "label": "Apr 26", "adoptionRate": 84, "performanceRate": 86, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 6700000, "isPostIntervention": true },
+    { "month": "2026-05", "label": "May 26", "adoptionRate": 83, "performanceRate": 85, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 6750000, "isPostIntervention": true },
+    { "month": "2026-06", "label": "Jun 26", "adoptionRate": 84, "performanceRate": 86, "expectedMin": 78, "expectedMax": 86, "cumulativeValueImpact": 6800000, "isPostIntervention": true }
+  ]
+}

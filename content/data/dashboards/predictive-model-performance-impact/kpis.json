@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "recommendations",
+      "label": "Recommendations",
+      "value": 14200,
+      "format": "count",
+      "delta": 4.2,
+      "comparisonPeriod": "vs prior 12M",
+      "subtext": "Issued across all markets and products",
+      "higherIsBetter": true
+    },
+    {
+      "id": "units-recommended",
+      "label": "Units Recommended",
+      "value": 2100000,
+      "format": "count",
+      "delta": 2.1,
+      "comparisonPeriod": "vs prior 12M",
+      "subtext": "Allocation volume recommended",
+      "higherIsBetter": true
+    },
+    {
+      "id": "adoption-rate",
+      "label": "Adoption Rate",
+      "value": 78,
+      "format": "percent",
+      "delta": 5,
+      "comparisonPeriod": "vs prior 12M",
+      "subtext": "Recommendations accepted and executed",
+      "higherIsBetter": true
+    },
+    {
+      "id": "performance-rate",
+      "label": "Performance Rate",
+      "value": 82,
+      "format": "percent",
+      "delta": 3,
+      "comparisonPeriod": "vs prior 12M",
+      "subtext": "Adopted actions meeting target outcome",
+      "higherIsBetter": true
+    },
+    {
+      "id": "override-rate",
+      "label": "Override Rate",
+      "value": 12,
+      "format": "percent",
+      "delta": -2,
+      "comparisonPeriod": "vs prior 12M",
+      "subtext": "Human overrides against model guidance",
+      "higherIsBetter": false
+    },
+    {
+      "id": "estimated-value-impact",
+      "label": "Estimated Value Impact",
+      "value": 6800000,
+      "format": "currency",
+      "delta": 1200000,
+      "comparisonPeriod": "incremental",
+      "subtext": "Cumulative attributed business value",
+      "higherIsBetter": true
+    }
+  ]
+}
