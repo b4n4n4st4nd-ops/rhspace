@@ -2,7 +2,7 @@
   "slug": "marketing-performance-dashboard",
   "title": "Experiential Marketing Performance Dashboard",
   "kind": "dashboard",
-  "status": "draft",
+  "status": "published",
   "designVersion": "report-card-v1",
   "dashboardType": "marketing-performance",
   "capabilityTags": ["kpi-tiles", "geo-map", "filter-bar", "executive-summary"],
