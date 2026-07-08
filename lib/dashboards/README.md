@@ -22,12 +22,44 @@ Interactive dashboard artifacts live in **Portfolio**, not Lab. Lab is reserved 
 
 Direct URL: `/portfolio/<slug>` (works for draft and published).
 
-## Hide / publish a dashboard
+## Portfolio JSON schema
 
-Edit the portfolio JSON `status` field:
+Every portfolio entry uses the same base fields:
+
+```json
+{
+  "slug": "...",
+  "title": "...",
+  "kind": "case-study" | "dashboard",
+  "status": "draft" | "published",
+  "category": "...",
+  "tools": [],
+  "featured": false,
+  "thumbnail": "/images/portfolio/....svg",
+  "summary": "...",
+  "date": "YYYY-MM"
+}
+```
+
+Dashboard entries (`kind: "dashboard"`) add:
+
+```json
+{
+  "designVersion": "report-card-v1" | "report-card-v2",
+  "dashboardType": "...",
+  "capabilityTags": [],
+  "displayOrder": 10,
+  "componentKey": "...",
+  "dataPath": "..."
+}
+```
+
+## Hide / publish
+
+Edit `status` in the portfolio JSON:
 
 - `"draft"` — hidden from portfolio grid and homepage featured section; still reachable by direct URL
-- `"published"` — visible in portfolio grid (omit `status` to treat as published)
+- `"published"` — visible in portfolio grid
 
 ## Change design version
 

@@ -1,6 +1,8 @@
 {
   "slug": "executive-kpi-dashboard",
   "title": "Executive KPI Performance Dashboard",
+  "kind": "case-study",
+  "status": "published",
   "category": "visualization",
   "tools": ["Tableau", "SQL", "Snowflake"],
   "featured": true,

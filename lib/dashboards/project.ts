@@ -4,13 +4,12 @@ export function isDashboardProject(project: Project): boolean {
   return project.kind === "dashboard";
 }
 
-/** Draft dashboards are hidden from portfolio grids but reachable by direct URL. */
-export function isPublishedDashboard(project: Project): boolean {
-  if (!isDashboardProject(project)) return true;
-  return project.status !== "draft";
+/** Draft items are hidden from portfolio grids but reachable by direct URL. */
+export function isPublishedProject(project: Project): boolean {
+  return project.status === "published";
 }
 
-/** Case studies always show; dashboards respect draft/published. */
+/** Portfolio grid — only published entries. */
 export function isVisibleInPortfolioGrid(project: Project): boolean {
-  return isPublishedDashboard(project);
+  return isPublishedProject(project);
 }

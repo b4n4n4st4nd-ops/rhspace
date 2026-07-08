@@ -1,11 +1,12 @@
 {
   "slug": "financial-report-generation-workflow",
   "title": "Financial Report Generation Workflow (Alteryx)",
+  "kind": "case-study",
+  "status": "published",
   "category": "automation",
   "tools": ["Alteryx", "SQL", "Excel"],
   "featured": true,
   "thumbnail": "/images/portfolio/financial-report-generation-workflow.svg",
   "summary": "Planned Alteryx workflow demo for repeatable financial reporting and package generation.",
-  "date": "2026-01",
-  "links": {}
+  "date": "2026-01"
 }

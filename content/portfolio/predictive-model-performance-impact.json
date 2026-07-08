@@ -2,7 +2,7 @@
   "slug": "predictive-model-performance-impact",
   "title": "Predictive Model Performance & Impact Framework",
   "kind": "dashboard",
-  "status": "draft",
+  "status": "published",
   "designVersion": "report-card-v2",
   "dashboardType": "model-operations",
   "capabilityTags": [
@@ -22,7 +22,7 @@
   "dataPath": "predictive-model-performance-impact",
   "category": "ai",
   "tools": ["Python", "SQL", "Tableau"],
-  "featured": false,
+  "featured": true,
   "thumbnail": "/images/portfolio/predictive-model-performance-impact.svg",
   "summary": "Decision-support framework for predictive models, recommendation engines, and optimization systems — tracking recommendations, human review, overrides, adoption, outcomes, exceptions, actions, and cumulative business impact over time.",
   "date": "2026-07"

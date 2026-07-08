@@ -1,6 +1,8 @@
 {
   "slug": "inventory-routing-agent",
   "title": "Inventory Routing Agent",
+  "kind": "case-study",
+  "status": "published",
   "category": "ai",
   "tools": ["Python", "OpenAI", "SQL"],
   "featured": true,

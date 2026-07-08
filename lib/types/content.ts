@@ -6,7 +6,7 @@ export type ProjectCategory =
 
 export type ProjectKind = "case-study" | "dashboard";
 
-export type DashboardStatus = "draft" | "published";
+export type ProjectStatus = "draft" | "published";
 
 export type DashboardDesignVersion = "report-card-v1" | "report-card-v2";
 
@@ -18,9 +18,9 @@ export interface ProjectLinks {
 export interface Project {
   slug: string;
   title: string;
-  kind?: ProjectKind;
-  /** Dashboard visibility — draft items stay in repo but hide from portfolio grid. */
-  status?: DashboardStatus;
+  kind: ProjectKind;
+  /** draft hides from portfolio grid; published shows. Case studies default to published. */
+  status: ProjectStatus;
   /** Shell/layout design direction applied by DashboardShell. */
   designVersion?: DashboardDesignVersion;
   /** Short taxonomy label, e.g. "marketing-performance", "executive-kpi". */
