@@ -11,7 +11,7 @@
   "dataPath": "marketing-performance-dashboard",
   "category": "analytics",
   "tools": ["Tableau", "SQL", "Python"],
-  "featured": false,
+  "featured": true,
   "thumbnail": "/images/portfolio/marketing-performance-dashboard.svg",
   "summary": "Interactive experiential marketing report — events, reach, engagement, goal progress, geo and brand performance for a fictional multi-brand portfolio.",
   "date": "2026-01"

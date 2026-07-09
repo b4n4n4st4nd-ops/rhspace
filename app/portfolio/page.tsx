@@ -18,7 +18,7 @@ export default function PortfolioPage() {
     <>
       <PageHero
         title="Portfolio"
-        subtitle="Case studies structured with STAR — Situation, Task, Action, Result. Employer work uses clean-room scenarios."
+        subtitle="Interactive dashboard demos with fictional data. Draft items are hidden until a visual is ready."
       />
       <Container className="py-16">
         <PortfolioGrid projects={projects} />

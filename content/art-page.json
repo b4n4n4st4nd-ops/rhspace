@@ -1,137 +1,74 @@
 {
   "hero": {
-    "title": "Art, Ritual, Story & Interactive Worlds",
-    "body": "Some work begins with a single brushstroke. Some begins with a line of poetry, a strange character, a sound, a light, or a ridiculous idea that refuses to leave. Across mediums, I'm interested in the same thing: turning attention into an experience people can feel.",
-    "ctaPrimary": {
-      "label": "Explore the Work",
-      "href": "#painting"
-    },
-    "ctaSecondary": {
-      "label": "View Interactive Installation",
-      "href": "#interactive-installation"
+    "title": "Art",
+    "body": ""
+  },
+  "nav": [
+    { "label": "Audio-Visual Design", "href": "#audio-visual-design" },
+    { "label": "Music Production", "href": "#music-production" },
+    { "label": "Painting", "href": "#painting" },
+    { "label": "Writing", "href": "#writing" }
+  ],
+  "audioVisualDesign": {
+    "title": "Audio-Visual Design",
+    "visualReactiveAudioWizard": {
+      "title": "Visual-Reactive Audio Wizard",
+      "body": "",
+      "video": {
+        "src": "/videos/visual-reactive-wizard.MOV"
+      },
+      "workspaceImage": {
+        "src": "/images/art/audio-visual/workspace-setup.png",
+        "alt": "Audio-visual programming workspace with monitors, MIDI controller, and lighting software"
+      }
+    }
+  },
+  "musicProduction": {
+    "title": "Music Production",
+    "audio": {
+      "src": "/audio/biolume-subglow.wav",
+      "title": "Biolume Subglow"
     }
   },
   "painting": {
     "title": "Painting",
-    "subtitle": "Enso, brushwork, and daily mindful art practice.",
-    "body": "My painting practice centers on the enso: a circular brushstroke used as a meditation on presence, imperfection, movement, and release. Each mark records a moment of breath, pressure, speed, hesitation, and surrender.",
-    "images": [
-      {
-        "src": "/images/art/enso/enso-studio.png",
-        "alt": "Close-up enso painting with brush and ink tray"
-      },
-      {
-        "src": "/images/art/enso/enso-flow-tent.png",
-        "alt": "Outdoor enso painting ritual setup with cushions, brushes, and painted circles"
-      },
-      {
-        "src": "/images/art/enso/enso-soak-display.png",
-        "alt": "Participatory enso wall with circular brush paintings"
-      }
-    ]
-  },
-  "poetry": {
-    "title": "Poetry & Lyrics",
-    "subtitle": "Haiku, lyrical fragments, and short-form meditations.",
-    "body": "My writing practice includes haiku, poems, lyrics, and compressed text works — small forms that hold emotion, humor, grief, wonder, and attention.",
-    "collectedHaiku": {
-      "title": "Collected Haiku",
-      "body": "Select haiku are available as digital collectibles through OpenSea.",
-      "collectionUrl": "https://opensea.io/collection/writtenbyry",
-      "collectionButtonLabel": "View Collection"
+    "enso": {
+      "title": "Enso",
+      "body": "A daily practice of painting enso, a reminder that the experience is the intention, the action is the point, the result is not. An act of letting go.",
+      "images": [
+        {
+          "src": "/images/art/enso/enso-studio.png",
+          "alt": "Close-up enso painting with brush and ink tray"
+        },
+        {
+          "src": "/images/art/enso/enso-flow-tent.png",
+          "alt": "Outdoor enso painting ritual setup with cushions, brushes, and painted circles"
+        },
+        {
+          "src": "/images/art/enso/enso-soak-display.png",
+          "alt": "Participatory enso wall with circular brush paintings"
+        }
+      ]
     }
   },
-  "story": {
-    "title": "Story & Worldbuilding",
-    "subtitle": "Original mythology, character-driven fiction, picture books, and animated worlds.",
-    "projects": [
-      {
-        "title": "Shaman Santa",
-        "tag": "Working title",
-        "body": "Shaman Santa is an original story world in development — beginning as a written narrative and expanding toward a picture book and animated film. The project explores myth, generosity, transformation, absurdity, and spirit through a new holiday archetype.",
-        "tags": [
-          "Book",
-          "Picture Book",
-          "Animated Film",
-          "Original Mythology",
-          "Character World"
-        ]
+  "writing": {
+    "title": "Writing",
+    "poetry": {
+      "title": "Poetry",
+      "haiku": {
+        "title": "Haiku"
       }
-    ]
-  },
-  "digitalArt": {
-    "title": "Digital Art & AR",
-    "subtitle": "3D characters, augmented reality triggers, and playful digital creatures.",
-    "highlightPhrase": "Physical images as portals.",
-    "projects": [
-      {
-        "title": "Con Pollo",
-        "body": "Con Pollo is a 3D digital bird character designed in Blender and built for augmented reality interaction. The experience uses scanned chicken imagery as a trigger, allowing the bird to emerge, fly, and animate from physical image markers.",
-        "image": null,
-        "tags": [
-          "Blender",
-          "3D Character",
-          "Augmented Reality",
-          "Image Tracking",
-          "Interactive Art",
-          "Animation"
-        ]
-      }
-    ]
-  },
-  "music": {
-    "title": "Music & Sound Production",
-    "subtitle": "Lyrics, production, audio programming, and interactive live systems.",
-    "body": "My sound work includes lyrics, music production, audio-reactive systems, and custom performance tools. For the Stinky Blinkers installation at SOAK, I built an interactive live audio system connecting LED behavior to sound through Python, OSC, Max for Live, and Ableton.",
-    "highlight": "The installation translated physical light controls into musical changes — triggering instruments, shaping effects, and turning the sculpture into a playable sound environment.",
-    "signalChain": [
-      "LED Sculpture Controls",
-      "Python Serial Listener",
-      "OSC Messages",
-      "Max for Live",
-      "Ableton Instrument + Audio Effects",
-      "Interactive Speaker / Live Set"
-    ],
-    "image": {
-      "src": "/images/art/soak-wizard-eyes.png",
-      "alt": "Interactive wizard face installation with illuminated eyes inside a dome"
     },
-    "detailSlug": "soak-live-set"
-  },
-  "installation": {
-    "title": "Interactive Installation",
-    "projectTitle": "Stinky Blinkers / Possitopia",
-    "body": "A participatory installation blending LED sculpture, wizard mythology, tactile controls, music, and live audio programming. Built for SOAK with Possitopia, the piece invited participants into a ritual-play environment where light, sound, character, and interaction became one shared experience.",
-    "image": {
-      "src": "/images/art/enso/enso-flow-tent.png",
-      "alt": "Outdoor Possitopia dome installation with enso paintings displayed nearby"
-    },
-    "specs": [
-      {
-        "label": "Environment",
-        "value": "Dome installation, wizard face, participatory art space"
-      },
-      {
-        "label": "Interaction",
-        "value": "Physical controls mapped to sound and light behavior"
-      },
-      {
-        "label": "Software",
-        "value": "Python serial listener and OSC message routing"
-      },
-      {
-        "label": "Audio",
-        "value": "Max for Live devices, Ableton instruments, effects, clips"
-      },
-      {
-        "label": "Experience",
-        "value": "Live sound-reactive sculpture and participatory ritual"
-      }
-    ],
-    "detailSlug": "soak-live-set"
-  },
-  "closing": {
-    "title": "Creative Practice",
-    "body": "Whether I'm painting an enso, writing a haiku, building a digital bird, producing sound, or wiring a sculpture into Ableton, the work is chasing the same thing: presence, participation, and a little bit of wonder."
+    "storyAndScript": {
+      "title": "Story & Script",
+      "projects": [
+        {
+          "title": "Untitled Mythology Story",
+          "body": "Coming Soon",
+          "image": null,
+          "tags": []
+        }
+      ]
+    }
   }
 }

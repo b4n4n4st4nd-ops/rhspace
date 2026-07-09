@@ -2,10 +2,10 @@
   "slug": "supply-chain-etl-pipeline",
   "title": "Supply Chain ETL Pipeline",
   "kind": "case-study",
-  "status": "published",
+  "status": "draft",
   "category": "analytics",
   "tools": ["Alteryx", "SQL", "Python"],
-  "featured": true,
+  "featured": false,
   "thumbnail": "/images/portfolio/supply-chain-etl-pipeline.svg",
   "summary": "Automated ingestion and validation for multi-source retail inventory data.",
   "date": "2024-05"

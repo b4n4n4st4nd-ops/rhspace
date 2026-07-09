@@ -22,9 +22,6 @@ export function EnsoGallery({ images }: EnsoGalleryProps) {
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
-          <p className="px-4 py-3 text-xs text-muted leading-relaxed">
-            {image.alt}
-          </p>
         </li>
       ))}
     </ul>

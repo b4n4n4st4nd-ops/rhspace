@@ -1,6 +1,6 @@
 {
   "slug": "soak-live-set",
-  "title": "Stinky Blinkers / Possitopia",
+  "title": "Visual-Reactive Audio Design",
   "medium": "Interactive installation",
   "tools": [
     "Python",
@@ -12,10 +12,9 @@
   ],
   "featured": true,
   "thumbnail": "/images/art/soak-wizard-eyes.png",
-  "summary": "A participatory SOAK installation where LED sculpture controls, Python serial listening, OSC routing, and Ableton turned light into a playable sound environment.",
+  "summary": "Audio-reactive installation connecting LED sculpture controls to live sound through Python, OSC, Max for Live, and Ableton.",
   "images": [
-    "/images/art/soak-wizard-eyes.png",
-    "/images/art/enso/enso-flow-tent.png"
+    "/images/art/soak-wizard-eyes.png"
   ],
   "video": "/videos/soak-wizard-live.mp4",
   "date": "2025-05"

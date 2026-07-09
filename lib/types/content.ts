@@ -92,61 +92,52 @@ export interface ArtSpec {
   value: string;
 }
 
+export interface AudioVisualProject {
+  title: string;
+  body: string;
+  video: { src: string };
+  workspaceImage: ArtImage;
+}
+
+export interface MusicProductionProject {
+  title: string;
+  audio: { src: string; title: string };
+}
+
 export interface ArtPageConfig {
   hero: {
     title: string;
     body: string;
-    ctaPrimary: { label: string; href: string };
-    ctaSecondary: { label: string; href: string };
+  };
+  nav: { label: string; href: string }[];
+  audioVisualDesign: {
+    title: string;
+    visualReactiveAudioWizard: AudioVisualProject;
+  };
+  musicProduction: {
+    title: string;
+    audio: { src: string; title: string };
   };
   painting: {
     title: string;
-    subtitle: string;
-    body: string;
-    images: EnsoImage[];
-  };
-  poetry: {
-    title: string;
-    subtitle: string;
-    body: string;
-    collectedHaiku: {
+    enso: {
       title: string;
       body: string;
-      collectionUrl: string;
-      collectionButtonLabel: string;
+      images: EnsoImage[];
     };
   };
-  story: {
+  writing: {
     title: string;
-    subtitle: string;
-    projects: ArtProjectCard[];
-  };
-  digitalArt: {
-    title: string;
-    subtitle: string;
-    highlightPhrase: string;
-    projects: ArtProjectCard[];
-  };
-  music: {
-    title: string;
-    subtitle: string;
-    body: string;
-    highlight: string;
-    signalChain: string[];
-    image: ArtImage;
-    detailSlug: string;
-  };
-  installation: {
-    title: string;
-    projectTitle: string;
-    body: string;
-    image: ArtImage;
-    specs: ArtSpec[];
-    detailSlug: string;
-  };
-  closing: {
-    title: string;
-    body: string;
+    poetry: {
+      title: string;
+      haiku: {
+        title: string;
+      };
+    };
+    storyAndScript: {
+      title: string;
+      projects: ArtProjectCard[];
+    };
   };
 }
 
