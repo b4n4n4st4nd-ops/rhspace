@@ -15,18 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ryanhambleton.space";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://joesgolfclub.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ryan Hambleton — Visualization Developer & Analytics Engineer",
-    template: "%s | Ryan Hambleton",
+    default: "Joe's Golf Club — Certified Titleist Club Fitting",
+    template: "%s | Joe's Golf Club",
   },
   description:
-    "BI platforms, data pipelines, AI agents, and interactive experiences. Tableau, Alteryx, SQL, Python, Next.js.",
+    "Certified Titleist club fitting and quality golf clubs for sale around Oak Ridge Country Club and Deer Park Country Club in Illinois.",
   openGraph: {
-    siteName: "Ryan Hambleton",
+    siteName: "Joe's Golf Club",
     type: "website",
     locale: "en_US",
   },
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="dark"
+      data-theme="light"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >

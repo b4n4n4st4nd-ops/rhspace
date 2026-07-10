@@ -85,10 +85,19 @@ export function SiteFooter({ site }: SiteFooterProps) {
   return (
     <footer className="mt-auto border-t border-border/60 bg-surface/50">
       <Container className="flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-muted">
-          © {year} {site.name}. Built with Next.js.
-        </p>
+        <div>
+          <p className="text-sm text-muted">
+            © {year} {site.name}. Certified Titleist club fitting in Illinois.
+          </p>
+          <p className="mt-1 text-sm text-muted">{site.tagline}</p>
+        </div>
         <div className="flex flex-wrap gap-4">
+          <a
+            href={`mailto:${site.email}`}
+            className="text-sm text-muted hover:text-accent transition-colors"
+          >
+            {site.email}
+          </a>
           {site.social.linkedin && (
             <a
               href={site.social.linkedin}

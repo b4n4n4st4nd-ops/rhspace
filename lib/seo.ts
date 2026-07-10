@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ryanhambleton.space";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://joesgolfclub.com";
+const siteName = "Joe's Golf Club";
 
 export function createMetadata({
   title,
@@ -14,18 +15,18 @@ export function createMetadata({
 }): Metadata {
   const url = `${siteUrl}${path}`;
   return {
-    title: `${title} | Ryan Hambleton`,
+    title: `${title} | ${siteName}`,
     description,
     openGraph: {
-      title: `${title} | Ryan Hambleton`,
+      title: `${title} | ${siteName}`,
       description,
       url,
-      siteName: "Ryan Hambleton",
+      siteName,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | Ryan Hambleton`,
+      title: `${title} | ${siteName}`,
       description,
     },
     alternates: {
