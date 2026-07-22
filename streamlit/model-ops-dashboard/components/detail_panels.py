@@ -6,52 +6,65 @@ import pandas as pd
 def render_exception_panel(outlier: pd.Series) -> str:
     return f"""
     <div class="panel">
-      <h3>Selected Exception</h3>
-      <div class="field-label">Market</div>
-      <div class="field-value">{outlier['market']}</div>
-      <div class="field-label">Product</div>
-      <div class="field-value">{outlier['product']}</div>
-      <div class="field-label">Likely Driver</div>
-      <div class="field-value">{outlier['likely_driver']}</div>
-      <div class="field-label">Severity</div>
-      <div class="field-value"><span class="severity-high">{outlier['severity']}</span></div>
-      <div class="field-label">Performance</div>
-      <div class="field-value">{outlier['metric_value']:.0f}%</div>
+      <h3>Statistical Outlier</h3>
+      <div class="field-label">Run / Market</div>
+      <div class="field-value">{outlier['period_label']} · {outlier['market']}</div>
+      <div class="field-label">Campaign</div>
+      <div class="field-value">{outlier['campaign']}</div>
+      <div class="field-label">Observed Result</div>
+      <div class="field-value">{outlier['metric_label']}: {outlier['metric_value']:.0f}%</div>
       <div class="field-label">Expected Range</div>
       <div class="field-value">{outlier['expected_min']:.0f}% – {outlier['expected_max']:.0f}%</div>
+      <div class="field-label">Detected Pattern</div>
+      <div class="field-value">{outlier['likely_driver']}</div>
+      <span class="severity-high">{outlier['severity']} priority</span>
     </div>
     """
 
 
-def render_intervention_panel(intervention: pd.Series) -> str:
+def render_insight_panel(insight: pd.Series) -> str:
     return f"""
     <div class="panel">
-      <h3>Intervention</h3>
-      <div class="field-label">Action Taken</div>
-      <div class="field-value">{intervention['action_taken']}</div>
-      <div class="field-label">Status</div>
-      <div class="field-value">{intervention['status']}</div>
-      <div class="field-label">Owner</div>
-      <div class="field-value">{intervention['owner']}</div>
-      <div class="field-label">Description</div>
-      <div class="field-value">{intervention['description']}</div>
-      <div class="field-label">Date</div>
-      <div class="field-value">{intervention['date']}</div>
+      <h3>Generated Insight</h3>
+      <div class="field-label">Original Generation</div>
+      <div class="field-value">{insight['generated_text']}</div>
+      <div class="field-label">Human Review</div>
+      <div class="field-value">{insight['human_text']}</div>
+      <div class="field-label">Evidence Method</div>
+      <div class="field-value">{insight['method']}</div>
+      <div class="field-label">Review Status</div>
+      <div class="field-value">{insight['status']} · {insight['confidence']} confidence</div>
+    </div>
+    """
+
+
+def render_action_panel(action: pd.Series) -> str:
+    return f"""
+    <div class="panel">
+      <h3>Suggested Actions</h3>
+      <div class="field-label">Business Action</div>
+      <div class="field-value">{action['business_action']}</div>
+      <div class="field-label">Model Action</div>
+      <div class="field-value">{action['model_action']}</div>
+      <div class="field-label">Owner / Status</div>
+      <div class="field-value">{action['owner']} · {action['status']}</div>
+      <div class="field-label">Implemented</div>
+      <div class="field-value">{action['implemented_date']}</div>
     </div>
     """
 
 
 def render_improvement_panel(improvement: pd.Series) -> str:
     return f"""
-    <div class="panel">
-      <h3>Improvement</h3>
-      <div class="field-label">Adoption · Before / After</div>
-      <div class="field-value">{improvement['adoption_before']:.0f}% → {improvement['adoption_after']:.0f}%</div>
-      <div class="field-label">Performance · Before / After</div>
-      <div class="field-value">{improvement['performance_before']:.0f}% → {improvement['performance_after']:.0f}%</div>
-      <div class="field-label">Estimated Incremental Value</div>
-      <div class="field-value">${improvement['incremental_value'] / 1_000_000:.1f}M</div>
-      <div class="field-label">Cumulative Value</div>
-      <div class="field-value">${improvement['cumulative_value'] / 1_000_000:.1f}M</div>
+    <div class="panel impact-panel">
+      <h3>Measured Influence</h3>
+      <div class="field-label">Campaign Adoption</div>
+      <div class="field-value metric-shift">{improvement['adoption_before']:.1f}% → {improvement['adoption_after']:.1f}%</div>
+      <div class="field-label">Conversion Rate</div>
+      <div class="field-value metric-shift">{improvement['conversion_before']:.1f}% → {improvement['conversion_after']:.1f}%</div>
+      <div class="field-label">Added Net Revenue</div>
+      <div class="field-value metric-shift">+${improvement['incremental_value'] / 1_000_000:.2f}M</div>
+      <div class="field-label">Estimated Missed Value</div>
+      <div class="field-value">${improvement['missed_value_before'] / 1_000:.0f}K → ${improvement['missed_value_after'] / 1_000:.0f}K</div>
     </div>
     """
