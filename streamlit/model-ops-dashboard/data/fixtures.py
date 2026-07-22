@@ -1,4 +1,8 @@
-"""Fictional model-operations portfolio data."""
+"""Transparensea demo data for the fictional A.Typical lifestyle brand.
+
+The structure is designed to mirror a production model-operations workspace.
+Values are synthetic and loosely inspired by the public Hillstrom marketing dataset.
+"""
 
 from __future__ import annotations
 
@@ -6,13 +10,14 @@ from dataclasses import dataclass
 
 import pandas as pd
 
-COMPANY = "Northwind Analytics"
+COMPANY = "A.Typical"
+PRODUCT = "Transparensea"
 DISCLAIMER = (
-    "Fictional decision-support scenario for portfolio demonstration. "
-    "No proprietary client or employer data is represented."
+    "Public-data-inspired demonstration with simulated production runs, adoption, "
+    "workflow, and financial outcomes. No employer or client data is represented."
 )
-LAST_REFRESHED = "2026-07-08"
-DEFAULT_OUTLIER_ID = "olr-mw-2508"
+LAST_REFRESHED = "2026-07-22"
+DEFAULT_OUTLIER_ID = "olr-performance-midwest-2506"
 
 
 @dataclass(frozen=True)
@@ -30,208 +35,154 @@ class KpiDefinition:
 def get_meta() -> dict[str, str]:
     return {
         "company": COMPANY,
+        "product": PRODUCT,
         "disclaimer": DISCLAIMER,
         "last_refreshed": LAST_REFRESHED,
-        "title": "Predictive Model Performance & Impact",
-        "subtitle": "Executive decision-support framework for recommendations, adoption, and business value",
+        "title": "Transparensea",
+        "subtitle": "Marketing model transparency, adoption, and impact",
+        "model": "Uplift / treatment-selection model · v2.1",
     }
 
 
 def get_kpis() -> list[KpiDefinition]:
     return [
-        KpiDefinition(
-            "recommendations",
-            "Recommendations",
-            14200,
-            "count",
-            4.2,
-            "vs prior 12M",
-            "Issued across all markets and products",
-            True,
-        ),
-        KpiDefinition(
-            "units-recommended",
-            "Units Recommended",
-            2_100_000,
-            "count",
-            2.1,
-            "vs prior 12M",
-            "Allocation volume recommended",
-            True,
-        ),
-        KpiDefinition(
-            "adoption-rate",
-            "Adoption Rate",
-            78,
-            "percent",
-            5.0,
-            "vs prior 12M",
-            "Recommendations accepted and executed",
-            True,
-        ),
-        KpiDefinition(
-            "performance-rate",
-            "Performance Rate",
-            82,
-            "percent",
-            3.0,
-            "vs prior 12M",
-            "Adopted actions meeting target outcome",
-            True,
-        ),
-        KpiDefinition(
-            "override-rate",
-            "Override Rate",
-            12,
-            "percent",
-            -2.0,
-            "vs prior 12M",
-            "Human overrides against model guidance",
-            False,
-        ),
-        KpiDefinition(
-            "estimated-value",
-            "Estimated Business Value",
-            6_800_000,
-            "currency",
-            1_200_000,
-            "incremental",
-            "Cumulative attributed business value",
-            True,
-        ),
+        KpiDefinition("customers", "Customers Scored", 184_260, "count", 8.4, "vs prior 12M", "Across 24 monthly batch runs", True),
+        KpiDefinition("messages", "Recommended Messages", 112_480, "count", 6.8, "vs prior 12M", "Campaign and follow-up recommendations", True),
+        KpiDefinition("adoption", "Campaign Adoption", 78.4, "percent", 16.7, "vs first 12M", "Recommended campaign actually sent", True),
+        KpiDefinition("conversion", "Conversion Rate", 5.9, "percent_1", 1.4, "vs first 12M", "Conversions from executed messages", True),
+        KpiDefinition("net-revenue", "Net Incremental Revenue", 2_840_000, "currency", 1_060_000, "vs first 12M", "Revenue less campaign and follow-up cost", True),
+        KpiDefinition("missed-value", "Estimated Missed Value", 410_000, "currency", -520_000, "vs first 12M", "Ignored or modified recommendations", False),
     ]
 
 
 def get_trends_df() -> pd.DataFrame:
     rows = [
-        ("2024-07", "Jul 24", 72, 80, 78, 86, 3_200_000, None, False),
-        ("2024-08", "Aug 24", 73, 81, 78, 86, 3_350_000, None, False),
-        ("2024-09", "Sep 24", 74, 82, 78, 86, 3_500_000, None, False),
-        ("2024-10", "Oct 24", 73, 81, 78, 86, 3_650_000, None, False),
-        ("2024-11", "Nov 24", 75, 83, 78, 86, 3_800_000, None, False),
-        ("2024-12", "Dec 24", 76, 84, 78, 86, 3_950_000, None, False),
-        ("2025-01", "Jan 25", 75, 83, 78, 86, 4_100_000, None, False),
-        ("2025-02", "Feb 25", 76, 82, 78, 86, 4_250_000, None, False),
-        ("2025-03", "Mar 25", 77, 84, 78, 86, 4_400_000, None, False),
-        ("2025-04", "Apr 25", 76, 83, 78, 86, 4_550_000, None, False),
-        ("2025-05", "May 25", 77, 84, 78, 86, 4_700_000, None, False),
-        ("2025-06", "Jun 25", 78, 83, 78, 86, 4_850_000, None, False),
-        ("2025-07", "Jul 25", 77, 82, 78, 86, 5_000_000, None, False),
-        ("2025-08", "Aug 25", 74, 61, 78, 86, 5_050_000, DEFAULT_OUTLIER_ID, False),
-        ("2025-09", "Sep 25", 75, 68, 78, 86, 5_200_000, None, False),
-        ("2025-10", "Oct 25", 79, 78, 78, 86, 5_450_000, None, True),
-        ("2025-11", "Nov 25", 81, 82, 78, 86, 5_750_000, None, True),
-        ("2025-12", "Dec 25", 82, 84, 78, 86, 6_050_000, None, True),
-        ("2026-01", "Jan 26", 83, 85, 78, 86, 6_300_000, None, True),
-        ("2026-02", "Feb 26", 82, 84, 78, 86, 6_450_000, None, True),
-        ("2026-03", "Mar 26", 83, 85, 78, 86, 6_600_000, None, True),
-        ("2026-04", "Apr 26", 84, 86, 78, 86, 6_700_000, None, True),
-        ("2026-05", "May 26", 83, 85, 78, 86, 6_750_000, None, True),
-        ("2026-06", "Jun 26", 84, 86, 78, 86, 6_800_000, None, True),
+        ("2024-07", "Jul 24", 56, 3.8, 118_000, 50, 68, None, False),
+        ("2024-08", "Aug 24", 58, 4.0, 126_000, 50, 68, None, False),
+        ("2024-09", "Sep 24", 57, 3.9, 121_000, 50, 68, None, False),
+        ("2024-10", "Oct 24", 60, 4.2, 139_000, 50, 68, None, False),
+        ("2024-11", "Nov 24", 61, 4.4, 152_000, 50, 68, None, False),
+        ("2024-12", "Dec 24", 63, 4.6, 168_000, 50, 68, None, False),
+        ("2025-01", "Jan 25", 62, 4.5, 161_000, 50, 68, None, False),
+        ("2025-02", "Feb 25", 64, 4.7, 176_000, 50, 68, None, False),
+        ("2025-03", "Mar 25", 65, 4.8, 184_000, 50, 68, None, False),
+        ("2025-04", "Apr 25", 63, 4.6, 171_000, 50, 68, None, False),
+        ("2025-05", "May 25", 61, 4.4, 157_000, 50, 68, None, False),
+        ("2025-06", "Jun 25", 49, 3.2, 96_000, 50, 68, DEFAULT_OUTLIER_ID, False),
+        ("2025-07", "Jul 25", 58, 4.1, 143_000, 50, 68, None, False),
+        ("2025-08", "Aug 25", 63, 4.6, 174_000, 50, 68, None, False),
+        ("2025-09", "Sep 25", 67, 4.9, 193_000, 50, 68, None, False),
+        ("2025-10", "Oct 25", 71, 5.2, 218_000, 50, 68, None, True),
+        ("2025-11", "Nov 25", 73, 5.4, 231_000, 50, 68, None, True),
+        ("2025-12", "Dec 25", 75, 5.6, 246_000, 50, 68, None, True),
+        ("2026-01", "Jan 26", 76, 5.7, 254_000, 50, 68, None, True),
+        ("2026-02", "Feb 26", 78, 5.9, 269_000, 50, 68, None, True),
+        ("2026-03", "Mar 26", 79, 6.0, 278_000, 50, 68, None, True),
+        ("2026-04", "Apr 26", 81, 6.2, 291_000, 50, 68, None, True),
+        ("2026-05", "May 26", 80, 6.1, 286_000, 50, 68, None, True),
+        ("2026-06", "Jun 26", 82, 6.3, 302_000, 50, 68, None, True),
     ]
-    return pd.DataFrame(
-        rows,
-        columns=[
-            "month",
-            "label",
-            "adoption_rate",
-            "performance_rate",
-            "expected_min",
-            "expected_max",
-            "cumulative_value",
-            "outlier_id",
-            "post_intervention",
-        ],
-    )
+    return pd.DataFrame(rows, columns=["month", "label", "adoption_rate", "conversion_rate", "net_revenue", "expected_min", "expected_max", "outlier_id", "post_intervention"])
+
+
+def get_campaign_performance_df() -> pd.DataFrame:
+    return pd.DataFrame([
+        ("Performance Collection", "Adopted", 22_840, 7.2, 742_000),
+        ("Performance Collection", "Modified", 6_780, 4.6, 121_000),
+        ("New Season Edit", "Adopted", 31_260, 5.8, 694_000),
+        ("New Season Edit", "Modified", 7_420, 4.1, 109_000),
+        ("Member Access", "Adopted", 12_160, 8.1, 516_000),
+        ("Member Access", "Ignored", 3_240, 2.2, -18_000),
+        ("Re-Engagement", "Adopted", 10_420, 4.9, 168_000),
+        ("Re-Engagement", "Ignored", 5_180, 1.7, -47_000),
+    ], columns=["campaign", "decision", "customers", "conversion_rate", "net_revenue"])
+
+
+def get_feature_influence_df() -> pd.DataFrame:
+    return pd.DataFrame([
+        ("Recent category spend", 0.91, "Mean |SHAP|", "Performance Collection"),
+        ("Purchase recency", 0.84, "Mean |SHAP|", "Re-Engagement"),
+        ("Prior campaign response", 0.79, "Mean |SHAP|", "Member Access"),
+        ("Digital engagement", 0.72, "Mean |SHAP|", "Performance Collection"),
+        ("Customer tenure", 0.58, "Permutation importance", "New Season Edit"),
+        ("Contact frequency", 0.47, "Permutation importance", "Suppression"),
+    ], columns=["feature", "influence", "method", "strongest_effect"])
 
 
 def get_outliers_df() -> pd.DataFrame:
-    return pd.DataFrame(
-        [
-            {
-                "outlier_id": DEFAULT_OUTLIER_ID,
-                "period": "2025-08",
-                "period_label": "Aug 2025",
-                "market": "Midwest Region",
-                "product": "Electronics Distribution",
-                "metric_label": "Performance rate",
-                "metric_value": 61,
-                "expected_min": 78,
-                "expected_max": 86,
-                "severity": "High",
-                "likely_driver": (
-                    "Elevated override behavior concentrated in the selected "
-                    "market/product segment; recommendation adoption and realized "
-                    "performance fell outside the expected range."
-                ),
-                "intervention_id": "int-mw-2509",
-            }
-        ]
-    )
+    return pd.DataFrame([{
+        "outlier_id": DEFAULT_OUTLIER_ID,
+        "period": "2025-06",
+        "period_label": "Jun 2025",
+        "market": "Midwest · Suburban",
+        "campaign": "Performance Collection",
+        "metric_label": "Campaign adoption",
+        "metric_value": 49,
+        "expected_min": 50,
+        "expected_max": 68,
+        "severity": "High",
+        "likely_driver": "Marketing teams substituted New Season Edit for the recommended Performance Collection among recently active sport customers. Adopted recommendations converted materially better than substitutions.",
+        "insight_id": "ins-performance-midwest-2506",
+    }])
 
 
-def get_interventions_df() -> pd.DataFrame:
-    return pd.DataFrame(
-        [
-            {
-                "intervention_id": "int-mw-2509",
-                "outlier_id": DEFAULT_OUTLIER_ID,
-                "action_taken": "Recommendation parameter review and override-reason capture",
-                "status": "Closed",
-                "owner": "Demand Planning Operations",
-                "description": (
-                    "Reviewed recommendation parameters for the affected segment and "
-                    "implemented structured override-reason capture to improve model "
-                    "feedback loops."
-                ),
-                "date": "2025-09-15",
-            }
-        ]
-    )
+def get_insights_df() -> pd.DataFrame:
+    return pd.DataFrame([{
+        "insight_id": "ins-performance-midwest-2506",
+        "outlier_id": DEFAULT_OUTLIER_ID,
+        "generated_text": "Performance Collection adoption fell to 49% in Midwest suburban markets. Customers receiving the recommended campaign converted at 6.9%, compared with 4.2% when New Season Edit was substituted. The recurring substitution pattern is associated with an estimated $286K in missed net revenue across the prior six runs.",
+        "human_text": "Confirmed: the Midwest team defaulted to the broader seasonal creative despite stronger model evidence for sport-oriented customers.",
+        "method": "Control limit breach + campaign substitution cohort comparison",
+        "status": "Confirmed",
+        "confidence": "High",
+        "action_id": "act-performance-midwest-2507",
+    }])
+
+
+def get_actions_df() -> pd.DataFrame:
+    return pd.DataFrame([{
+        "action_id": "act-performance-midwest-2507",
+        "insight_id": "ins-performance-midwest-2506",
+        "business_action": "Make the model-recommended campaign and audience the default campaign plan; require a reason when teams substitute another campaign.",
+        "model_action": "Review feature influence near the Performance Collection / New Season Edit treatment boundary, especially recent category spend and digital engagement.",
+        "status": "Measuring",
+        "owner": "Lifecycle Marketing + Model Product",
+        "implemented_date": "2025-09-15",
+    }])
 
 
 def get_improvements_df() -> pd.DataFrame:
-    return pd.DataFrame(
-        [
-            {
-                "improvement_id": "imp-mw-2509",
-                "intervention_id": "int-mw-2509",
-                "adoption_before": 74,
-                "adoption_after": 83,
-                "performance_before": 61,
-                "performance_after": 85,
-                "incremental_value": 1_200_000,
-                "cumulative_value": 6_800_000,
-            }
-        ]
-    )
+    return pd.DataFrame([{
+        "improvement_id": "imp-performance-midwest-2507",
+        "action_id": "act-performance-midwest-2507",
+        "adoption_before": 60.8,
+        "adoption_after": 78.4,
+        "conversion_before": 4.3,
+        "conversion_after": 5.9,
+        "incremental_value": 1_060_000,
+        "missed_value_before": 930_000,
+        "missed_value_after": 410_000,
+    }])
 
 
 def get_outlier_by_id(outlier_id: str) -> pd.Series | None:
-    df = get_outliers_df()
-    match = df[df["outlier_id"] == outlier_id]
-    if match.empty:
-        return None
-    return match.iloc[0]
+    match = get_outliers_df().query("outlier_id == @outlier_id")
+    return None if match.empty else match.iloc[0]
 
 
-def get_intervention_for_outlier(outlier_id: str) -> pd.Series | None:
-    outlier = get_outlier_by_id(outlier_id)
-    if outlier is None:
-        return None
-    df = get_interventions_df()
-    match = df[df["intervention_id"] == outlier["intervention_id"]]
-    if match.empty:
-        return None
-    return match.iloc[0]
+def get_insight_for_outlier(outlier_id: str) -> pd.Series | None:
+    match = get_insights_df().query("outlier_id == @outlier_id")
+    return None if match.empty else match.iloc[0]
 
 
-def get_improvement_for_intervention(intervention_id: str) -> pd.Series | None:
-    df = get_improvements_df()
-    match = df[df["intervention_id"] == intervention_id]
-    if match.empty:
-        return None
-    return match.iloc[0]
+def get_action_for_insight(insight_id: str) -> pd.Series | None:
+    match = get_actions_df().query("insight_id == @insight_id")
+    return None if match.empty else match.iloc[0]
+
+
+def get_improvement_for_action(action_id: str) -> pd.Series | None:
+    match = get_improvements_df().query("action_id == @action_id")
+    return None if match.empty else match.iloc[0]
 
 
 def get_outlier_options() -> list[tuple[str, str]]:
