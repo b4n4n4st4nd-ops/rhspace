@@ -1,0 +1,19 @@
+{
+  "slug": "mindful-commune",
+  "title": "Mindful Commune",
+  "kind": "case-study",
+  "status": "published",
+  "primaryPractice": "web-app-development",
+  "capabilityTags": [
+    "Community Product",
+    "Maps and Events",
+    "Member Profiles"
+  ],
+  "technologyTags": ["React", "Next.js"],
+  "projectType": "in-development",
+  "displayOrder": 40,
+  "featured": false,
+  "thumbnail": "/images/portfolio/mindful-commune.svg",
+  "summary": "Community application for mindfulness practitioners to connect through events, people, guides, spaces, maps, groups, and member profiles. Coming soon.",
+  "date": "2026-07"
+}

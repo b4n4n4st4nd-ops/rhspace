@@ -1,0 +1,24 @@
+{
+  "slug": "ryanhambleton-space",
+  "title": "ryanhambleton.space",
+  "kind": "case-study",
+  "status": "published",
+  "primaryPractice": "web-app-development",
+  "capabilityTags": [
+    "Product Platform",
+    "Portfolio System",
+    "Interactive Lab",
+    "Content Architecture"
+  ],
+  "technologyTags": ["Next.js", "React", "Tailwind", "Vercel"],
+  "projectType": "live-product",
+  "displayOrder": 30,
+  "featured": true,
+  "thumbnail": "/images/portfolio/ryanhambleton-space.svg",
+  "summary": "Personal professional platform built with React and Next.js — portfolio, interactive lab, professional narrative, creative work, and a foundation for reusable development systems.",
+  "date": "2026-07",
+  "links": {
+    "live": "https://ryanhambleton.space",
+    "repo": "https://github.com/b4n4n4st4nd-ops/rhspace"
+  }
+}

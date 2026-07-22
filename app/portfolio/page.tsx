@@ -1,27 +1,27 @@
 import { Container } from "@/components/layout/SiteChrome";
 import { PageHero } from "@/components/ui/PageHero";
-import { PortfolioGrid } from "@/components/portfolio/PortfolioGrid";
-import { getPublishedProjects } from "@/lib/content";
+import { PortfolioPracticeSections } from "@/components/portfolio/PortfolioPracticeSections";
+import { getPublishedProjectsByPractice } from "@/lib/content";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Portfolio",
   description:
-    "BI, visualization, analytics engineering, and AI projects — Tableau, Alteryx, SQL, Python.",
+    "AI product development, BI reporting and visualization, solution architecture, and web and app development.",
   path: "/portfolio",
 });
 
 export default function PortfolioPage() {
-  const projects = getPublishedProjects();
+  const projectsByPractice = getPublishedProjectsByPractice();
 
   return (
     <>
       <PageHero
         title="Portfolio"
-        subtitle="Interactive dashboard demos with fictional data. Draft items are hidden until a visual is ready."
+        subtitle="Four practices: AI product development, BI reporting and visualization, solution architecture, and web and app development. Primary practice places each project; tags show the wider skills involved."
       />
       <Container className="py-16">
-        <PortfolioGrid projects={projects} />
+        <PortfolioPracticeSections projectsByPractice={projectsByPractice} />
       </Container>
     </>
   );

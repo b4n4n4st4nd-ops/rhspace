@@ -12,8 +12,12 @@ For employer work, **never** include proprietary system names, internal metrics,
 {
   "slug": "your-slug",
   "title": "Project Title",
-  "category": "visualization",
-  "tools": ["Tableau", "SQL"],
+  "kind": "case-study",
+  "status": "published",
+  "primaryPractice": "bi-reporting-visualization",
+  "capabilityTags": ["Executive Reporting", "Decision Support"],
+  "technologyTags": ["Tableau", "SQL"],
+  "projectType": "case-study",
   "featured": false,
   "thumbnail": "/images/portfolio/your-slug.png",
   "summary": "One-line outcome.",
@@ -22,9 +26,16 @@ For employer work, **never** include proprietary system names, internal metrics,
 }
 ```
 
-Categories: `visualization` | `analytics` | `automation` | `ai`
+`primaryPractice` (card section):
+`ai-product-development` | `bi-reporting-visualization` | `solution-architecture` | `web-app-development`
 
-2. Create `content/portfolio/your-slug.mdx` using STAR:
+`projectType`: `interactive-demo` | `live-product` | `case-study` | `in-development`
+
+`status`: `draft` hides from `/portfolio`; `published` shows (dashboards also need a registered component).
+
+**Rule:** primary practice places the card; capability/technology tags show overlap.
+
+2. For case studies, optionally create `content/portfolio/your-slug.mdx` using STAR:
 
 ```mdx
 ## Situation
@@ -39,6 +50,8 @@ Tools, architecture, your contributions...
 ## Result
 Quantified outcomes...
 ```
+
+Live products can omit MDX and use the summary + Visit live button.
 
 3. Add thumbnail to `public/images/portfolio/`
 4. Run `npm run build` to verify

@@ -72,8 +72,12 @@ export default async function ProjectPage({ params }: PageProps) {
             ← Portfolio
           </Link>
           <div className="mt-6 flex flex-wrap gap-2">
-            <Badge>{project.category}</Badge>
-            {project.tools.map((t) => (
+            <Badge>
+              {project.projectType === "in-development"
+                ? "Coming soon"
+                : project.projectType}
+            </Badge>
+            {project.technologyTags.map((t) => (
               <Badge key={t}>{t}</Badge>
             ))}
           </div>
@@ -87,7 +91,11 @@ export default async function ProjectPage({ params }: PageProps) {
                 href={project.links.live}
                 external={project.links.live.startsWith("http")}
               >
-                View live
+                {project.projectType === "live-product"
+                  ? "Visit live"
+                  : project.projectType === "interactive-demo"
+                    ? "Open demo"
+                    : "View live"}
               </Button>
             )}
             {project.links?.repo && (
@@ -101,6 +109,19 @@ export default async function ProjectPage({ params }: PageProps) {
       <Container className="py-16">
         {mdx ? (
           <div className="prose-site max-w-none">{mdx}</div>
+        ) : project.projectType === "live-product" ? (
+          <p className="text-muted">
+            Live product — use Visit live above to open the experience.
+          </p>
+        ) : project.projectType === "interactive-demo" ? (
+          <p className="text-muted">
+            Interactive Lab demo — use Open demo above to launch it.
+          </p>
+        ) : project.projectType === "in-development" ? (
+          <p className="text-muted">
+            Coming soon — this app is in development and not yet available to
+            explore.
+          </p>
         ) : (
           <p className="text-muted">Case study coming soon.</p>
         )}

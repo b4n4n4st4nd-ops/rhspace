@@ -1,0 +1,23 @@
+{
+  "slug": "joes-golf-club",
+  "title": "Joe's Golf Club",
+  "kind": "case-study",
+  "status": "published",
+  "primaryPractice": "web-app-development",
+  "capabilityTags": [
+    "Product Design",
+    "Customer Experience",
+    "Responsive Web",
+    "Booking Workflow"
+  ],
+  "technologyTags": ["Next.js", "React", "Vercel"],
+  "projectType": "live-product",
+  "displayOrder": 20,
+  "featured": true,
+  "thumbnail": "/images/portfolio/joes-golf-club.svg",
+  "summary": "Customer-facing website for a certified Titleist club fitter — booking and golfer-intake experiences designed for desktop, phone, and tablet.",
+  "date": "2026-06",
+  "links": {
+    "live": "https://joesgolfclub.com"
+  }
+}

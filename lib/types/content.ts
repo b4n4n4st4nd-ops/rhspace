@@ -1,12 +1,18 @@
-export type ProjectCategory =
-  | "visualization"
-  | "analytics"
-  | "automation"
-  | "ai";
+export type PrimaryPractice =
+  | "ai-product-development"
+  | "bi-reporting-visualization"
+  | "solution-architecture"
+  | "web-app-development";
 
 export type ProjectKind = "case-study" | "dashboard";
 
 export type ProjectStatus = "draft" | "published";
+
+export type ProjectType =
+  | "interactive-demo"
+  | "live-product"
+  | "case-study"
+  | "in-development";
 
 export type DashboardDesignVersion = "report-card-v1" | "report-card-v2";
 
@@ -19,22 +25,25 @@ export interface Project {
   slug: string;
   title: string;
   kind: ProjectKind;
-  /** draft hides from portfolio grid; published shows. Case studies default to published. */
+  /** draft hides from portfolio grid; published shows. */
   status: ProjectStatus;
+  /** Determines which /portfolio section the card appears in. */
+  primaryPractice: PrimaryPractice;
+  /** Wider skills involved; does not move the card between sections. */
+  capabilityTags: string[];
+  /** Platforms and tools shown on cards. */
+  technologyTags: string[];
+  projectType: ProjectType;
   /** Shell/layout design direction applied by DashboardShell. */
   designVersion?: DashboardDesignVersion;
   /** Short taxonomy label, e.g. "marketing-performance", "executive-kpi". */
   dashboardType?: string;
-  /** Capability labels for filtering and future portfolio UX. */
-  capabilityTags?: string[];
-  /** Lower numbers surface first among dashboards; case studies fall back to date. */
+  /** Lower numbers surface first within a practice section. */
   displayOrder?: number;
   /** Key into lib/dashboards/registry.ts */
   componentKey?: string;
   /** Folder under content/data/dashboards/ */
   dataPath?: string;
-  category: ProjectCategory;
-  tools: string[];
   featured: boolean;
   thumbnail: string;
   summary: string;

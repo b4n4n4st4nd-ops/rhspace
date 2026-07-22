@@ -1,0 +1,14 @@
+{
+  "slug": "ai-automated-dashboards",
+  "title": "AI Automated Dashboards",
+  "kind": "case-study",
+  "status": "draft",
+  "primaryPractice": "ai-product-development",
+  "capabilityTags": ["AI-Assisted Analysis", "Dashboard Acceleration", "Documentation"],
+  "technologyTags": ["Python", "LLMs", "Tableau"],
+  "projectType": "in-development",
+  "featured": false,
+  "thumbnail": "/images/portfolio/ai-automated-dashboards.svg",
+  "summary": "Tools and workflows that use AI to accelerate dashboard creation, formula development, documentation, and insight generation.",
+  "date": "2026-07"
+}

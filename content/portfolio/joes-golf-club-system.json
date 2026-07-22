@@ -1,0 +1,18 @@
+{
+  "slug": "joes-golf-club-system",
+  "title": "Joe's Golf Club Customer and Operational System",
+  "kind": "case-study",
+  "status": "draft",
+  "primaryPractice": "solution-architecture",
+  "capabilityTags": [
+    "Customer System Design",
+    "Operational Workflows",
+    "Integration Planning"
+  ],
+  "technologyTags": ["Next.js", "React", "Vercel"],
+  "projectType": "case-study",
+  "featured": false,
+  "thumbnail": "/images/portfolio/joes-golf-club-system.svg",
+  "summary": "Architecture for a connected golf-fitting business system spanning website, booking, intake, customer records, follow-up, inventory, invoicing, and operational reporting.",
+  "date": "2026-07"
+}

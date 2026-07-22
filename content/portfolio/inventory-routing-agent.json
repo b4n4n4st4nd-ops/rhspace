@@ -1,13 +1,16 @@
 {
   "slug": "inventory-routing-agent",
-  "title": "Inventory Routing Agent",
+  "title": "Retail Inventory Routing Agent",
   "kind": "case-study",
-  "status": "draft",
-  "category": "ai",
-  "tools": ["Python", "OpenAI", "SQL"],
+  "status": "published",
+  "primaryPractice": "ai-product-development",
+  "capabilityTags": ["Agentic Workflows", "Human-in-the-Loop", "Decision Logs"],
+  "technologyTags": ["Python", "OpenAI", "SQL"],
+  "projectType": "interactive-demo",
+  "displayOrder": 10,
   "featured": false,
   "thumbnail": "/images/portfolio/inventory-routing-agent.svg",
-  "summary": "Agent-assisted routing recommendations for a generic retail inventory scenario.",
+  "summary": "Clean-room agent demo — natural language inventory questions with expandable decision logs.",
   "date": "2025-01",
   "links": {
     "live": "/lab/agent-shell"

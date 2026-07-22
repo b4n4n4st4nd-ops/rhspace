@@ -1,0 +1,19 @@
+{
+  "slug": "enterprise-bi-architecture",
+  "title": "Enterprise BI and Reporting Architecture",
+  "kind": "case-study",
+  "status": "draft",
+  "primaryPractice": "solution-architecture",
+  "capabilityTags": [
+    "Platform Strategy",
+    "Semantic Layer",
+    "Governance",
+    "Migration Planning"
+  ],
+  "technologyTags": ["Tableau", "Alteryx", "Databricks", "Snowflake"],
+  "projectType": "case-study",
+  "featured": false,
+  "thumbnail": "/images/portfolio/enterprise-bi-architecture.svg",
+  "summary": "Clean-room architecture narrative for enterprise reporting continuity, semantic-layer strategy, governance standards, and readiness for AI-assisted analytics.",
+  "date": "2026-07"
+}

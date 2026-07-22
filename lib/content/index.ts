@@ -2,13 +2,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
-import { isVisibleInPortfolioGrid } from "@/lib/dashboards/project";
+import { groupProjectsByPractice, isVisibleInPortfolioGrid } from "@/lib/dashboards/project";
 import type {
   AboutContent,
   ArtPageConfig,
   ArtPiece,
   LabDemo,
   PoetryCollection,
+  PrimaryPractice,
   Project,
   ResumeData,
   SiteConfig,
@@ -53,6 +54,13 @@ export function getProjectBySlug(slug: string): Project | undefined {
 
 export function getFeaturedProjects(): Project[] {
   return getPublishedProjects().filter((p) => p.featured);
+}
+
+export function getPublishedProjectsByPractice(): Record<
+  PrimaryPractice,
+  Project[]
+> {
+  return groupProjectsByPractice(getPublishedProjects());
 }
 
 export async function getProjectMdx(slug: string) {

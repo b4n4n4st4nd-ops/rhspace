@@ -39,8 +39,8 @@ export default function HomePage() {
       <Container as="section" className="py-16 sm:py-24">
         <SectionHeading
           eyebrow="Featured work"
-          title="Dashboards, Reports and Solutions"
-          description="Explore examples of my work in business intelligence"
+          title="Selected projects"
+          description="Examples across BI reporting, web products, and interactive demos"
         />
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((project) => (

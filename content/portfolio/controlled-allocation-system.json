@@ -1,0 +1,19 @@
+{
+  "slug": "controlled-allocation-system",
+  "title": "Controlled Allocation Decision-Support System",
+  "kind": "case-study",
+  "status": "draft",
+  "primaryPractice": "solution-architecture",
+  "capabilityTags": [
+    "System Design",
+    "Human-in-the-Loop",
+    "Workflow Architecture",
+    "Impact Measurement"
+  ],
+  "technologyTags": ["Tableau", "Alteryx", "SQL"],
+  "projectType": "case-study",
+  "featured": false,
+  "thumbnail": "/images/portfolio/controlled-allocation-system.svg",
+  "summary": "Clean-room architecture case study for connecting forecasts, recommendations, business overrides, allocation outputs, adoption tracking, and executive review into one operating system.",
+  "date": "2026-07"
+}

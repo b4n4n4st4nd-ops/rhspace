@@ -8,6 +8,16 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const tags = [
+    ...project.capabilityTags.slice(0, 2),
+    ...project.technologyTags.slice(0, 2),
+  ].slice(0, 4);
+
+  const typeLabel =
+    project.projectType === "in-development"
+      ? "Coming soon"
+      : project.projectType;
+
   return (
     <Link
       href={`/portfolio/${project.slug}`}
@@ -24,9 +34,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex flex-wrap gap-2">
-          <Badge>{project.category}</Badge>
-          {project.tools.slice(0, 3).map((tool) => (
-            <Badge key={tool}>{tool}</Badge>
+          <Badge>{typeLabel}</Badge>
+          {tags.map((tag) => (
+            <Badge key={tag}>{tag}</Badge>
           ))}
         </div>
         <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">

@@ -1,0 +1,14 @@
+{
+  "slug": "nlp-insight-generator",
+  "title": "NLP Insight Generator",
+  "kind": "case-study",
+  "status": "draft",
+  "primaryPractice": "ai-product-development",
+  "capabilityTags": ["NLP Interfaces", "Insight Generation", "Agent Workflows"],
+  "technologyTags": ["Streamlit", "Python", "Databricks"],
+  "projectType": "in-development",
+  "featured": false,
+  "thumbnail": "/images/portfolio/nlp-insight-generator.svg",
+  "summary": "Streamlit application for natural-language questions that generate insights and visualizations through LLM and agent workflows.",
+  "date": "2026-07"
+}
