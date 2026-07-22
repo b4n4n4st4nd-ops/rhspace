@@ -6,9 +6,11 @@ from data.fixtures import KpiDefinition
 def format_kpi_value(kpi: KpiDefinition) -> str:
     if kpi.fmt == "percent":
         return f"{kpi.value:.0f}%"
+    if kpi.fmt == "percent_1":
+        return f"{kpi.value:.1f}%"
     if kpi.fmt == "currency":
-        if kpi.value >= 1_000_000:
-            return f"${kpi.value / 1_000_000:.1f}M"
+        if abs(kpi.value) >= 1_000_000:
+            return f"${kpi.value / 1_000_000:.2f}M"
         return f"${kpi.value:,.0f}"
     if kpi.value >= 1_000_000:
         return f"{kpi.value / 1_000_000:.1f}M"
@@ -18,20 +20,18 @@ def format_kpi_value(kpi: KpiDefinition) -> str:
 
 
 def format_delta(kpi: KpiDefinition) -> tuple[str, str]:
-    if kpi.fmt == "currency" and kpi.comparison == "incremental":
-        text = f"+${kpi.delta / 1_000_000:.1f}M {kpi.comparison}"
-        css = "kpi-delta-up"
-        return text, css
-
     positive = kpi.delta >= 0
     good = positive if kpi.higher_is_better else not positive
     arrow = "▲" if positive else "▼"
-    suffix = "%" if kpi.fmt == "percent" else " pts" if kpi.fmt == "count" else ""
-    magnitude = abs(kpi.delta)
-    if kpi.fmt == "percent":
-        text = f"{arrow} {magnitude:.0f}{suffix} {kpi.comparison}"
+
+    if kpi.fmt == "currency":
+        amount = abs(kpi.delta)
+        formatted = f"${amount / 1_000_000:.2f}M" if amount >= 1_000_000 else f"${amount:,.0f}"
+        text = f"{arrow} {formatted} {kpi.comparison}"
+    elif kpi.fmt in {"percent", "percent_1"}:
+        text = f"{arrow} {abs(kpi.delta):.1f} pts {kpi.comparison}"
     else:
-        text = f"{arrow} {magnitude:.1f}{suffix} {kpi.comparison}"
+        text = f"{arrow} {abs(kpi.delta):.1f}% {kpi.comparison}"
 
     css = "kpi-delta-up" if good else "kpi-delta-down"
     return text, css
