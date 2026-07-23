@@ -122,7 +122,7 @@ def test_modules_import():
     sys.path.insert(0, str(ROOT))
     from views import pages  # noqa: F401
     from analytics import adoption, financials  # noqa: F401
-    from charts.product_charts import trend_lines  # noqa: F401
+    from charts.product_charts import rates_trend  # noqa: F401
     from data import loaders, schema  # noqa: F401
     monthly = pd.read_csv(GEN / "monthly_kpis.csv")
-    assert trend_lines(monthly) is not None
+    assert rates_trend(monthly) is not None

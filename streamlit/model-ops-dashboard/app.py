@@ -7,7 +7,14 @@ from __future__ import annotations
 
 import streamlit as st
 
-from components.ui import apply_filters, get_data, inject_styles, render_global_filters
+from components.ui import (
+    apply_filters,
+    get_data,
+    inject_styles,
+    render_filter_bar,
+    render_masthead,
+    render_navigation,
+)
 from views.pages import (
     render_adoption,
     render_conversion_revenue,
@@ -24,20 +31,20 @@ st.set_page_config(
     page_title="Transparensea · A.Typical",
     page_icon="🌊",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 inject_styles()
 
 PAGES = {
-    "Model Overview": render_overview,
-    "Input Transparency": render_input_transparency,
+    "Overview": render_overview,
+    "Inputs": render_input_transparency,
     "Recommendations": render_recommendations,
     "Adoption": render_adoption,
-    "Conversion & Revenue": render_conversion_revenue,
-    "Exceptions & Outliers": render_exceptions,
+    "Impact": render_conversion_revenue,
+    "Exceptions": render_exceptions,
     "Insights & Actions": render_insights_actions,
-    "Improvement History": render_improvement_history,
+    "Improvement": render_improvement_history,
     "Model Details": render_model_details,
 }
 
@@ -47,12 +54,8 @@ except FileNotFoundError as exc:
     st.error(str(exc))
     st.stop()
 
-filters = render_global_filters(data)
+render_masthead(data)
+page = render_navigation()
+filters = render_filter_bar(data)
 filtered = apply_filters(data, filters)
-
-with st.sidebar:
-    st.markdown("---")
-    page = st.radio("Navigate", list(PAGES.keys()), index=0)
-    st.caption("Transparensea product demonstration")
-
 PAGES[page](filtered)
