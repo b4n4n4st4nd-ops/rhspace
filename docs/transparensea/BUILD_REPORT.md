@@ -51,12 +51,46 @@ From `data/schema.py`:
 1. Keep portfolio case study `predictive-model-performance-impact` untouched.
 2. Update Lab slug `analytics-explorer` title/summary to Transparensea; add `transparensea` Lab entry; preserve routes.
 3. Precompute all demo CSVs so Streamlit Cloud needs no training at runtime.
-4. Use sidebar navigation + persistent filters for a single-product feel inside an iframe.
+4. Product chrome: dark compact masthead, horizontal pill navigation, collapsed filter expander (no permanent wide sidebar).
 5. Include one inconclusive action (`ACT-BIZ-002`) so the loop is not unrealistically perfect.
+
+## Visual redesign (2026-07-22)
+
+Second visual pass after the first shell was judged still too “default Streamlit.”
+
+### Audit findings (why it felt like a prototype)
+
+- Plotly titles serialized poorly → literal **“undefined”** in chart corners; some Overview charts appeared empty
+- CSS targeted `stPills`, but current Streamlit renders `st.pills` as `stButtonGroup` + `data-variant="pills"` — selected-state styling never applied
+- Open/close HTML wrappers around `st.plotly_chart` / dataframes broke Streamlit nesting
+- `st.dataframe(..., height=None)` crashed Impact on newer Streamlit (`StreamlitInvalidHeightError`)
+- Wide Impact table columns overflowed iframe widths; permanent sidebar patterns still echoed in docs
+
+### What changed
+
+- Design tokens + product CSS in `components/styles.py` (warm canvas gradient, Fraunces/Source Sans, ocean selected pills, denser spacing)
+- Shell: masthead status chips, horizontal nav, active-filter chip toolbar + collapsed “Adjust filters”
+- Overview / Adoption flagship controls use secondary pill rows (trend metric / adoption KPI)
+- Unified Plotly theme: no in-chart titles (cleared from layout), light plot interiors, bottom legends, intervention markers via shapes
+- Compact Impact decision-group table; chart HTML titles outside Plotly; dataframe styling without broken HTML wraps
+- Screenshots refreshed under `docs/transparensea/screenshots/` (including scroll and iframe-width captures)
+
+### Acceptance check
+
+| Criterion | Status |
+|---|---|
+| Dark compact masthead | Met |
+| Horizontal pill nav (selected = ocean fill) | Met |
+| Compact filters, no wide sidebar | Met |
+| Warm light canvas | Met |
+| Charts render (no “undefined”) | Met |
+| Overview / Adoption flagship | Met |
+| Tables readable at ~980px iframe width | Improved (compact columns + scroll) |
+| Feels like premium product vs default Streamlit | Substantially improved; Streamlit widget chrome (selectboxes, expanders) still visible |
 
 ## Files changed (high level)
 
-- `streamlit/model-ops-dashboard/**` — full product rebuild
+- `streamlit/model-ops-dashboard/**` — full product rebuild + visual redesign
 - `content/lab/analytics-explorer.json`, `content/lab/transparensea.json`
 - `content/portfolio/analytics-explorer.json` — Lab link copy only
 - `docs/transparensea/*`
@@ -84,19 +118,23 @@ streamlit run streamlit/model-ops-dashboard/app.py
 - Incremental revenue is modeled/simulated, not live causal identification
 - Business and model interventions overlap; effects are partially confounded by design
 - Lab `embedUrl` still placeholder until Streamlit Community Cloud URL is published
-- Chart click-to-filter relies on selectbox fallbacks (robust in Streamlit)
+- Native Streamlit widgets (selectbox, expander, dataframe chrome) remain partially visible despite CSS theming
+- Very dense multi-column tables still rely on horizontal scroll inside narrow iframes
+- Chart click-to-filter uses selectbox / pill fallbacks (Streamlit has no reliable Plotly click binding here)
 
 ## Deferred work
 
-Live warehouse, SSO, multi-tenant, Jira/Slack, configuration wizard, LLM insight layer, automated retraining.
+Live warehouse, SSO, multi-tenant, Jira/Slack, configuration wizard, LLM insight layer, automated retraining, custom React shell if Streamlit widget chrome must disappear entirely.
 
 ## Local run
 
 ```bash
 cd streamlit/model-ops-dashboard
 pip install -r requirements.txt
-streamlit run app.py
+python -m streamlit run app.py
 ```
+
+Local URL: **http://localhost:8501**
 
 ## Deployment notes
 
